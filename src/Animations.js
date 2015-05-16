@@ -4,3 +4,6 @@
 function openCards(a, b){
 
 }
+function nextMove(a, b, list){
+
+}

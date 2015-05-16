@@ -15,6 +15,7 @@
         "src/app.js",
         "src/index.js",
         "src/methods.js",
-        "src/Animations.js"
+        "src/Animations.js",
+        "src/GameScene.js"
     ]
 }
