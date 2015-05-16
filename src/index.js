@@ -11,13 +11,16 @@ var GameBoardLayer = cc.Layer.extend({
         // 3. add your codes below...
         // add a label shows "Hello World"
         // create and initialize a label
+        for (i = 1; i < 6; i++) {
+            for (j = 1; j < 6; j++)
+                var temp = new ccui.Button();
+                temp.x = cc.winSize.width / 5
+        }
         var uiButton = new ccui.Button();
         uiButton.loadTextures("res/CloseNormal.png", "res/CloseSelected.png"," ");
         uiButton.x = 50;
         uiButton.y = 50;
-
         this.addChild(uiButton, 200);
-
         return true;
     }
 });
