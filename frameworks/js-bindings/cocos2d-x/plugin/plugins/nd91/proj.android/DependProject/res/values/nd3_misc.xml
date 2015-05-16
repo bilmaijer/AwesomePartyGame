@@ -3,7 +3,7 @@
 <!-- color -->
 
 	<color name="nd3_white">#FFFFFF</color>
-	<color name="nd3_black">#000000</color>
+	<color name="nd3_black">#FFFFFF</color>
 	<color name="nd3_background">#EBEBEB</color>
 	<color name="nd3_blue">#0000FF</color>
 	<color name="nd3_dark_blue">#415f91</color> 

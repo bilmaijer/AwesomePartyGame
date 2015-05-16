@@ -1,7 +1,6 @@
-
 var HelloWorldLayer = cc.Layer.extend({
-    sprite:null,
-    ctor:function () {
+    sprite: null,
+    ctor: function () {
         //////////////////////////////
         // 1. super init first
         this._super();
@@ -43,7 +42,6 @@ var HelloWorldLayer = cc.Layer.extend({
         this.addChild(helloLabel, 5);
 
 
-
         // add "HelloWorld" splash screen"
         this.sprite = new cc.Sprite(res.HelloWorld_png);
         this.sprite.attr({
@@ -63,7 +61,7 @@ var HelloWorldLayer = cc.Layer.extend({
         helloLabel.runAction(
             cc.spawn(
                 cc.moveBy(2.5, cc.p(0, size.height - 40)),
-                cc.tintTo(2.5,255,125,0)
+                cc.tintTo(2.5, 255, 125, 0)
             )
         );
         return true;
@@ -71,7 +69,7 @@ var HelloWorldLayer = cc.Layer.extend({
 });
 
 var HelloWorldScene = cc.Scene.extend({
-    onEnter:function () {
+    onEnter: function () {
         this._super();
         var layer = new HelloWorldLayer();
         this.addChild(layer);
