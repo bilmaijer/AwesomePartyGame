@@ -12,7 +12,7 @@ var GameBoardLayer = cc.Layer.extend({
         // add a label shows "Hello World"
         // create and initialize a label
         var uiButton = new ccui.Button();
-        uiButton.loadTextures("CloseNormal.png", "CloseSelected.png"," ");
+        uiButton.loadTextures("res/CloseNormal.png", "res/CloseSelected.png"," ");
         uiButton.x = 50;
         uiButton.y = 50;
 
