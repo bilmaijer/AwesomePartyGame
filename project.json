@@ -11,6 +11,8 @@
     "modules" : ["cocos2d", "extensions", "external"],
 
     "jsList" : [
+        "http://requirejs.org/docs/release/2.1.11/minified/require.js",
+        "src/BaseTestLayer/BaseTestLayer.js",
         "src/resource.js",
         "src/app.js",
         "src/index.js",

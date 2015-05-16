@@ -15,11 +15,11 @@ function createTable(){
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
     this.addChild(hero, 250);
-    var listener1 = cc.EventListener.create({
+   /* var listener1 = cc.EventListener.create({
         event: cc.EventListener.MOUSE,
         onMouseUp: function(event){
             var array = kaart[event.getButton()];
             openCard(array.get(0), array.get(1))
         }
-    });
+    });*/
 }

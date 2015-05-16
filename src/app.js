@@ -43,19 +43,23 @@ var HelloWorldLayer = cc.Layer.extend({
 
 
         // add "HelloWorld" splash screen"
-        this.sprite = new cc.Sprite(res.HelloWorld_png);
-        this.sprite.attr({
+        var MySprite = new cc.Sprite("res/a1.png");
+        MySprite.attr({
             x: size.width / 2,
             y: size.height / 2,
-            scale: 0.5,
-            rotation: 180
+            scale: 0.2,
+            rotation: 0
         });
-        this.addChild(this.sprite, 0);
+        //MySprite.flipY = true;
+        this.addChild(MySprite, 0);
 
-        this.sprite.runAction(
+
+        //this.sprite
+       MySprite.runAction(
             cc.sequence(
-                cc.rotateTo(2, 0),
-                cc.scaleTo(2, 1, 1)
+                cc.scaleTo(2,1,1)
+                //cc.rotateTo(2,0)
+
             )
         );
         helloLabel.runAction(
@@ -64,6 +68,23 @@ var HelloWorldLayer = cc.Layer.extend({
                 cc.tintTo(2.5, 255, 125, 0)
             )
         );
+        //cc.SpriteFrameCache.getInstance().addSpriteFrames(spritesheet_plist); // add Spritesheet Plist
+        //var SpriteSheet = cc.SpriteBatchNode.create(spritesheet_png);  // add Spritesheet Png
+        //this.addChild(SpriteSheet,1);
+
+        // Push the frames for animation
+       /* var animFrames = ["res/a1.png", "res/a2.png", "res/a3png];
+
+
+
+        // taadaa ...!!  Animate the sprites
+        var animation = cc.Animation(animFrames, 0.06);
+        var sprite = cc.Sprite.createWithSpriteFrameName(res.a1_png);
+        sprite.setAnchorPoint(0.5,0.5); // optional
+        sprite.setScale(1.0,1.0); // optional
+        sprite.setPosition(50, 50);
+        sprite.runAction(cc.RepeatForever(cc.Animate(animation)));
+        this.addChild(sprite,1);*/
         return true;
     }
 });
