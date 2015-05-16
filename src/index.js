@@ -11,13 +11,12 @@ var GameBoardLayer = cc.Layer.extend({
         // 3. add your codes below...
         // add a label shows "Hello World"
         // create and initialize a label
-        var uiButton = ccs.Button.create();
-        uiButton.setPosition(50,50);
-        uiButton.setAnchorPoint(40,40);
-        uiButton.setTitleText("Hello!");
-        uiButton.setTitleColor(cc.color);
+        var uiButton = new ccui.Button();
+        uiButton.loadTextures("CloseNormal.png", "CloseSelected.png"," ");
+        uiButton.x = 50;
+        uiButton.y = 50;
 
-        this.addChild(uiButton, 5);
+        this.addChild(uiButton, 200);
 
         return true;
     }
