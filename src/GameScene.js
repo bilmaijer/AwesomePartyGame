@@ -7,7 +7,7 @@ var GameLayer = cc.Layer.extend({
         this._super();
         this.init();
     },
-    init: function() {
+    init: function () {
 
 
         var winsize = cc.director.getWinSize();
@@ -44,12 +44,12 @@ var GameLayer = cc.Layer.extend({
 
 });
 var BackgroundLayer = cc.Layer.extend({
-    ctor:function () {
+    ctor: function () {
         this._super();
         this.init();
     },
 
-    init:function () {
+    init: function () {
         this._super();
         var winsize = cc.director.getWinSize();
 
