@@ -12,8 +12,7 @@ function createTable(s){
     for (i = 0; i < 25; i++) {
         content.push(i)
     }
-    var map_fromButton = [];
-    var map_fromIndex = [];
+    var map = [];
 
     var listener1 = cc.EventListener.create({
         event: cc.EventListener.MOUSE,
@@ -34,23 +33,22 @@ function createTable(s){
             temp.x = cc.winSize.width / 6 * i;
             temp.y = cc.winSize.height / 6 * j + cc.winSize.height / 12;
             s.addChild(temp, 201);
+            temp.name = (i-1).toString() + " " + (j-1).toString();
+            console.log(temp.name);
 
-            console.log(temp);
             var randInt = Math.floor(Math.random() * (content.length));
-
-            map_fromIndex[i.toString() + " " + j.toString()] = [temp.toString(), content[randInt]];
-            //console.log("rand "+content[randInt]);
-            //console.log("")
-            map_fromButton[temp] = [i, j, content[randInt]];
-            console.log("rand "+map_fromButton);
-            content.splice(randInt, 1);
-
+            map[temp.name] = [i-1, j-1, content[randInt]];
         }
     }
-    console.log(map_fromButton);
     var hero = new cc.Sprite("res/favicon.ico");
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
     s.addChild(hero, 250);
+    var moveTo = new cc.MoveTo(2, cc.p(cc.winSize.width / 2, cc.winSize.height / 3));
+    //hero.runAction(moveTo);
+         /*function onMouseUp(event) {
+            var array = kaart[event.getButton()];
+            openCard(array[0], array[1]);
 
+    }*/
 }

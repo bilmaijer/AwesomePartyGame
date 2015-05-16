@@ -4,6 +4,6 @@
 function openCard(a, b){
     console.log("click");
 }
-function nextMove(a, b, list) {
+function nextMove(a, b, hero) {
 
 }
