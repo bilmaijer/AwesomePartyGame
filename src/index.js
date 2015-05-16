@@ -6,7 +6,7 @@ var GameBoardLayer = cc.Layer.extend({
     ctor: function () {
         this._super();
         var a = {};
-        createTable();
+        createTable(this);
         return true;
     }
 });
