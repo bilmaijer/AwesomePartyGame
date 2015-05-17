@@ -49,7 +49,7 @@ function createTable(s) {
         for (j = 1; j < 6; j++) {
             var temp = new ccui.Button();
             temp.x = cc.winSize.width / 6 * i;
-            temp.y = cc.winSize.height / 6 * j + cc.winSize.height / 12;
+            temp.y = cc.winSize.height / 6 * j;
             x = i - 1;
             y = j - 1;
             temp.loadTextures("res/active.png", "res/a4.png", " ");
