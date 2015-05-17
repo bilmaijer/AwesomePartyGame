@@ -18,7 +18,7 @@ function createTable(s) {
         content.push("res/sporty");
         content.push("res/brainy");
         content.push("res/tutvumis");
-        content.push("res/naugty");
+        content.push("res/naughty");
     }
     var map = [];
     var hero = new cc.Sprite("res/hero.png");
@@ -69,7 +69,6 @@ function createTable(s) {
                 if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
                     temp.loadTextures(map[tempName][1]+".png",map[tempName][1]+"1.png"," ");
                     temp.setScale(0.1, 0.1);
-                    //temp.loadTextures("res/active.png", "res/active.png", " ");
                     temp.addTouchEventListener(onMouseUp, this);
                 }
                 else {
