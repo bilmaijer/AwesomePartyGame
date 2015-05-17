@@ -5,8 +5,10 @@ function createTable(s) {
 
     var i;
     var j;
+    var array;
     var kasutatud = [];
-    var map = [];
+    var uus;
+    var test;
 
     //buttonite tegemise asi randomiga
 
@@ -18,8 +20,8 @@ function createTable(s) {
         content.push("res/tutvumis");
         content.push("res/naugty");
     }
-
-    var hero = new cc.Sprite("res/favicon.ico");
+    var map = [];
+    var hero = new cc.Sprite("res/hero.png");
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
 
