@@ -38,12 +38,8 @@ function createTable(s) {
                 kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
                 asukoht = uus;
                 fullRefresh(asukoht[0], asukoht[1]);
-                //console.log("click");
             }
-
         }
-        //var array = map[event];
-        //penCard(array.get(0), array.get(1))
     }
 
     //buttonite tegemise asi randomiga
@@ -56,6 +52,8 @@ function createTable(s) {
             var temp = new ccui.Button();
             temp.x = cc.winSize.width / 6 * i;
             temp.y = cc.winSize.height / 6 * j + cc.winSize.height / 12;
+            x=i-1;
+            y=j-1;
             temp.loadTextures("res/active.png", "res/a4.png", " ", empty);
             s.addChild(temp, 201);
             temp.name = (i - 1).toString() + " " + (j - 1).toString();
@@ -69,7 +67,6 @@ function createTable(s) {
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
             if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
                 if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
-                    console.log(map[tempName]);
                     temp.loadTextures(map[tempName][1]+".png",map[tempName][1]+"1.png"," ");
                     temp.setScale(0.1, 0.1);
                     //temp.loadTextures("res/active.png", "res/active.png", " ");
