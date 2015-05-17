@@ -17,7 +17,7 @@ function createTable(s){
 
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED){
-            console.log("click");
+            //console.log("click");
         }
         //var array = map[event];
         //penCard(array.get(0), array.get(1))
@@ -34,7 +34,7 @@ function createTable(s){
             temp.y = cc.winSize.height / 6 * j + cc.winSize.height / 12;
             s.addChild(temp, 201);
             temp.name = (i-1).toString() + " " + (j-1).toString();
-            console.log(temp.name);
+            //console.log(temp.name);
 
             var randInt = Math.floor(Math.random() * (content.length));
             map[temp.name] = [i-1, j-1, content[randInt]];
