@@ -66,13 +66,18 @@ function createTable(s) {
     hero.y = cc.winSize.height / 12;
     s.addChild(hero, 250);
     function refresh(x, y, tempName) {
-    function refresh(x, y, temp) {
-        if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
-            if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
-                if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
-                    temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + "1.png", " ");
-                    temp.addTouchEventListener(onMouseUp, this);
-                    temp.setScale(0.7, 0.7);
+        function refresh(x, y, temp) {
+            if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
+                if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
+                    if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
+                        temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + "1.png", " ");
+                        temp.addTouchEventListener(onMouseUp, this);
+                        temp.setScale(0.7, 0.7);
+                    }
+                    else {
+                        temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
+                        temp.setScale(0.7, 0.7);
+                    }
                 }
                 else {
                     temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
@@ -80,22 +85,17 @@ function createTable(s) {
                 }
             }
             else {
-                temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
+                temp.loadTextures("res/c5.png", "res/c5.png", " ");
                 temp.setScale(0.7, 0.7);
             }
         }
-        else {
-            temp.loadTextures("res/c5.png", "res/c5.png", " ");
-            temp.setScale(0.7, 0.7);
-        }
-    }
 
-    function fullRefresh() {
-        for (i = 1; i < 6; i++) {
-            for (j = 1; j < 6; j++) {
+        function fullRefresh() {
+            for (i = 1; i < 6; i++) {
+                for (j = 1; j < 6; j++) {
 
-                refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
+                    refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
+                }
             }
         }
-    }
-}
+    }}
