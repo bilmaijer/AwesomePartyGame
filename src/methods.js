@@ -24,13 +24,14 @@ function createTable(s) {
     var hero = new cc.Sprite("res/hero.png");
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
+    s.addChild(hero, 250);
 
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED) {
             var uus = event.name.split(" ");
             var test = uus[0].toString() + " " + uus[1].toString();
             var array = map[test];
-            s.addChild(hero, 250);
+
             openCard(array[0].x, array[0].y, s);
             var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
             hero.runAction(moveTo);
@@ -90,6 +91,7 @@ function createTable(s) {
     function fullRefresh() {
         for (i = 1; i < 6; i++) {
             for (j = 1; j < 6; j++) {
+
                 refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
             }
         }

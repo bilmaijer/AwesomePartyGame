@@ -9,6 +9,7 @@ function openCard(a, b, s){
             event.getParent().runAction(
                 cc.moveTo(0.5,cc.winSize.width*2,cc.winSize.height*2)
             )
+
         }
         //var array = map[event];
         //penCard(array.get(0), array.get(1))
