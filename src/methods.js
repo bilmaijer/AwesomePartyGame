@@ -17,7 +17,7 @@ function createTable(s) {
         content.push(i)
     }
     var map = [];
-    var hero = new cc.Sprite("res/hero.png");
+    var hero = new cc.Sprite();
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
 
