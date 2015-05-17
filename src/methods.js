@@ -28,7 +28,7 @@ function createTable(s){
         for (j = 1; j < 6; j++) {
             var temp = new ccui.Button();
             //cc.eventManager.addListener(listener1, temp);
-            temp.loadTextures("res/a5.png", "res/a4.png", " ");
+            temp.loadTextures("res/a5.png", "res/a4.png", "");
             temp.addTouchEventListener(onMouseUp, this);
             temp.x = cc.winSize.width / 6 * i;
             temp.y = cc.winSize.height / 6 * j + cc.winSize.height / 12;
