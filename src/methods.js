@@ -17,6 +17,12 @@ function createTable(s){
 
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED){
+            var uus = event.name.split(" ");
+            uus[0]--;
+            var test = uus[0].toString() + " " + uus[1].toString();
+            var array = map[test];
+            array[0].setOpacity(0,5);
+
             //console.log("click");
         }
         //var array = map[event];
@@ -37,7 +43,7 @@ function createTable(s){
             //console.log(temp.name);
 
             var randInt = Math.floor(Math.random() * (content.length));
-            map[temp.name] = [i-1, j-1, content[randInt]];
+            map[temp.name] = [temp, content[randInt]];
         }
     }
     var hero = new cc.Sprite("res/favicon.ico");
