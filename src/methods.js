@@ -65,7 +65,7 @@ function createTable(s) {
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
     s.addChild(hero, 250);
-    function refresh(x, y, tempName) {
+
         function refresh(x, y, temp) {
             if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
                 if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
@@ -98,4 +98,4 @@ function createTable(s) {
                 }
             }
         }
-    }}
+    }
