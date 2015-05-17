@@ -21,10 +21,7 @@ function createTable(s) {
         content.push("res/naughty");
     }
     var map = [];
-    var hero = new cc.Sprite("res/hero.png");
-    hero.x = cc.winSize.width / 2;
-    hero.y = cc.winSize.height / 12;
-    s.addChild(hero, 250);
+
 
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED) {
@@ -64,6 +61,10 @@ function createTable(s) {
         }
     }
 
+    var hero = new cc.Sprite();
+    hero.x = cc.winSize.width / 2;
+    hero.y = cc.winSize.height / 12;
+    s.addChild(hero, 250);
     function refresh(x, y, tempName) {
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
             if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
@@ -91,7 +92,7 @@ function createTable(s) {
         for (i = 1; i < 6; i++) {
             for (j = 1; j < 6; j++) {
 
-                refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
+                refresh(i - 1, j - 1, (i - 1).toString() + " " + (j - 1).toString());
             }
 
         }

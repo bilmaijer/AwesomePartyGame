@@ -7,7 +7,7 @@ function openCard(a, b, s){
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED) {
             event.getParent().runAction(
-                cc.moveTo(0.5,cc.winSize.width,cc.winSize.height)
+                cc.moveTo(0.5,cc.winSize.width*10,cc.winSize.height*10)
             )
             event.getParent().removeChild(event);
 
