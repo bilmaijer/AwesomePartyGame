@@ -32,10 +32,11 @@ function createTable(s){
             hero.runAction(moveTo);
             if (asukoht[0] != null) {
                 kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
-                asukoht = (parseInt(uus[0]), parseInt(uus[1]));
-                refresh(parseInt(uus[0]), parseInt(uus[1]), array[0]);
+                asukoht = uus;
+                fullRefresh(asukoht[0], asukoht[1]);
                 //console.log("click");
             }
+
         }
         //var array = map[event];
         //penCard(array.get(0), array.get(1))
@@ -60,9 +61,9 @@ function createTable(s){
         }
     }
     function refresh(x, y, temp){
-        if (kasutatud.indexOf(x.toString()+" "+ y.toString())===-1) {
-            if (asukoht[0] - x === 0 || asukoht[0] - x === 1 || asukoht[0] - x === -1) {
-                if (asukoht[1] - y === 0 || asukoht[1] - y === 1 || asukoht[1] - y === -1) {
+        if (kasutatud.indexOf(x.toString()+" "+ y.toString())==-1) {
+            if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
+                if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
                     temp.loadTextures("res/a5.png", "res/a4.png", " ");
                     temp.addTouchEventListener(onMouseUp, this);
                 }
@@ -77,5 +78,13 @@ function createTable(s){
         else{
             temp.loadTextures("res/c5.png", "res/c5.png", " ");
         }
+    }
+    function fullRefresh(x, y){
+        for (i = 1; i < 6; i++) {
+            for (j = 1; j < 6; j++) {
+                refresh(i-1, j-1, map[(i-1).toString() + " " + (j-1).toString()][0]);
+            }
+
+            }
     }
 }
