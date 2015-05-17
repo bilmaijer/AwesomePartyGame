@@ -21,16 +21,17 @@ function createTable(s) {
         content.push("res/naughty");
     }
     var map = [];
-    var hero = new cc.Sprite();
+    var hero = new cc.Sprite("res/hero.png");
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
+    s.addChild(hero, 250);
 
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED) {
             var uus = event.name.split(" ");
             var test = uus[0].toString() + " " + uus[1].toString();
             var array = map[test];
-            s.addChild(hero, 250);
+
             openCard(array[0].x, array[0].y, s);
             var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
             hero.runAction(moveTo);
@@ -67,7 +68,9 @@ function createTable(s) {
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
             if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
                 if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
-                    temp.loadTextures(map[tempName][1]+".png",map[tempName][1]+"1.png"," ");
+                    console.log(map[tempName]);
+                    var arr = map[tempName];
+                    temp.loadTextures(arr[1]+".png",arr[1]+"1.png"," ");
                     temp.setScale(0.1, 0.1);
                     temp.addTouchEventListener(onMouseUp, this);
                 }
@@ -87,6 +90,7 @@ function createTable(s) {
     function fullRefresh() {
         for (i = 1; i < 6; i++) {
             for (j = 1; j < 6; j++) {
+
                 refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
             }
 
