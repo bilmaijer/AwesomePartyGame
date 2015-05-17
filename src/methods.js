@@ -14,22 +14,20 @@ function createTable(s){
     }
     var map = [];
 
-    var listener1 = cc.EventListener.create({
-        event: cc.EventListener.MOUSE,
-        onMouseUp: function(event){
-            console.log("click");
-            var array = map_fromButton[event.getButton()];
-            openCard(array.get(0), array.get(1))
-        }
-    });
+
+    function onMouseUp(event) {
+        console.log("click");
+        //var array = map[event];
+        //penCard(array.get(0), array.get(1))
+    }
     //buttonite tegemise asi randomiga
 
     for (i = 1; i < 6; i++) {
         for (j = 1; j < 6; j++) {
             var temp = new ccui.Button();
-            cc.eventManager.addListener(listener1, temp);
+            //cc.eventManager.addListener(listener1, temp);
             temp.loadTextures("res/a5.png", "res/a4.png", " ");
-
+            temp.addTouchEventListener(onMouseUp, this);
             temp.x = cc.winSize.width / 6 * i;
             temp.y = cc.winSize.height / 6 * j + cc.winSize.height / 12;
             s.addChild(temp, 201);
