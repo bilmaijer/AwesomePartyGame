@@ -3,6 +3,7 @@
  */
 function openCard(a, b){
     console.log("click");
+
 }
 function nextMove(a, b, hero) {
 
