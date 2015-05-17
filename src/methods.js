@@ -13,31 +13,22 @@ function createTable(s){
         content.push(i)
     }
     var map = [];
-    var hero = new cc.Sprite("res/favicon.ico");
-    hero.x = cc.winSize.width / 2;
-    hero.y = cc.winSize.height / 12;
+
 
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED){
             var uus = event.name.split(" ");
+            uus[0]--;
             var test = uus[0].toString() + " " + uus[1].toString();
             var array = map[test];
-            s.addChild(hero, 250);
-            var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
-            hero.runAction(moveTo);
-
+            array[0].setOpacity(0,5);
 
             //console.log("click");
-            console.log(event.name);
         }
         //var array = map[event];
         //penCard(array.get(0), array.get(1))
     }
     //buttonite tegemise asi randomiga
-
-    var asukoht = [2,-1];
-    var x;
-    var y;
 
     for (i = 1; i < 6; i++) {
         for (j = 1; j < 6; j++) {
@@ -62,8 +53,21 @@ function createTable(s){
 
             s.addChild(temp, 201);
             temp.name = (i-1).toString() + " " + (j-1).toString();
+            //console.log(temp.name);
+
             var randInt = Math.floor(Math.random() * (content.length));
             map[temp.name] = [temp, content[randInt]];
         }
     }
+    var hero = new cc.Sprite("res/favicon.ico");
+    hero.x = cc.winSize.width / 2;
+    hero.y = cc.winSize.height / 12;
+    s.addChild(hero, 250);
+    var moveTo = new cc.MoveTo(2, cc.p(cc.winSize.width / 2, cc.winSize.height / 3));
+    //hero.runAction(moveTo);
+         /*function onMouseUp(event) {
+            var array = kaart[event.getButton()];
+            openCard(array[0], array[1]);
+
+    }*/
 }
