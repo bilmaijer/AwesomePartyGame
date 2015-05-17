@@ -17,7 +17,7 @@ function createTable(s) {
         content.push(i)
     }
     var map = [];
-    var hero = new cc.Sprite("res/favicon.ico");
+    var hero = new cc.Sprite("res/hero.png");
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
 
@@ -46,7 +46,7 @@ function createTable(s) {
 
     var asukoht = [2, -1];
 
-    var empty = new ccui.Widget();
+    //var empty = new ccui.Widget();
     for (i = 1; i < 6; i++) {
         for (j = 1; j < 6; j++) {
             var temp = new ccui.Button();
@@ -54,7 +54,7 @@ function createTable(s) {
             temp.y = cc.winSize.height / 6 * j + cc.winSize.height / 12;
             x = i - 1;
             y = j - 1;
-            temp.loadTextures("res/active.png", "res/a4.png", " ", empty);
+            temp.loadTextures("res/active.png", "res/a4.png", " ");
             refresh(x, y, temp);
             s.addChild(temp, 201);
             temp.name = (i - 1).toString() + " " + (j - 1).toString();
@@ -67,7 +67,7 @@ function createTable(s) {
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
             if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
                 if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
-                    temp.loadTextures("res/a5.png", "res/a4.png", " ");
+                    temp.loadTextures("res/active.png", "res/active.png", " ");
                     temp.addTouchEventListener(onMouseUp, this);
                 }
                 else {
