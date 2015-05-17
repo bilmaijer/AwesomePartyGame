@@ -60,7 +60,7 @@ function createTable(s) {
             refresh(x, y, temp);
         }
     }
-    var hero = new cc.Sprite();
+    var hero = new cc.Sprite("res/hero.png");
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
     s.addChild(hero, 250);
