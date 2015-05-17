@@ -15,8 +15,10 @@ function createTable(s){
     var map = [];
 
 
-    function onMouseUp(event) {
-        console.log("click");
+    function onMouseUp(event, type) {
+        if (type == ccui.Widget.TOUCH_ENDED){
+            console.log("click");
+        }
         //var array = map[event];
         //penCard(array.get(0), array.get(1))
     }
