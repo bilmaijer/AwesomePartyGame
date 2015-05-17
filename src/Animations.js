@@ -9,7 +9,7 @@ function openCard(a, b, s){
             event.getParent().runAction(
                 cc.moveTo(0.5,cc.winSize.width*10,cc.winSize.height*10)
             )
-            event.getParent().removeChild(event);
+            
 
         }
         //var array = map[event];

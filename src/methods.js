@@ -35,7 +35,7 @@ function createTable(s) {
             if (asukoht[0] != null) {
                 kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
                 asukoht = uus;
-                fullRefresh(asukoht[0], asukoht[1]);
+                fullRefresh();
             }
         }
     }
@@ -50,14 +50,14 @@ function createTable(s) {
             var temp = new ccui.Button();
             temp.x = cc.winSize.width / 6 * i;
             temp.y = cc.winSize.height / 6 * j + cc.winSize.height / 12;
-            x=i-1;
-            y=j-1;
-            temp.loadTextures("res/active.png", "res/a4.png", " ", empty);
+            x = i - 1;
+            y = j - 1;
+            temp.loadTextures("res/active.png", "res/a4.png", " ");
             s.addChild(temp, 201);
             temp.name = (i - 1).toString() + " " + (j - 1).toString();
             var randInt = Math.floor(Math.random() * (content.length));
             map[temp.name] = [temp, content[randInt]];
-            refresh(x, y, temp.name);
+            refresh(x, y, temp);
         }
     }
 
@@ -66,25 +66,27 @@ function createTable(s) {
     hero.y = cc.winSize.height / 12;
     s.addChild(hero, 250);
     function refresh(x, y, tempName) {
+    function refresh(x, y, temp) {
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
             if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
                 if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
-                    console.log(map[tempName]);
-                    var arr = map[tempName];
-                    temp.loadTextures(arr[1]+".png",arr[1]+"1.png"," ");
-                    temp.setScale(0.1, 0.1);
+                    temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + "1.png", " ");
                     temp.addTouchEventListener(onMouseUp, this);
+                    temp.setScale(0.7, 0.7);
                 }
                 else {
                     temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
+                    temp.setScale(0.7, 0.7);
                 }
             }
             else {
                 temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
+                temp.setScale(0.7, 0.7);
             }
         }
         else {
             temp.loadTextures("res/c5.png", "res/c5.png", " ");
+            temp.setScale(0.7, 0.7);
         }
     }
 
@@ -92,9 +94,8 @@ function createTable(s) {
         for (i = 1; i < 6; i++) {
             for (j = 1; j < 6; j++) {
 
-                refresh(i - 1, j - 1, (i - 1).toString() + " " + (j - 1).toString());
+                refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
             }
-
         }
     }
 }
