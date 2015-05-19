@@ -1,8 +1,9 @@
 /**
  * Created by Spikey on 16.05.2015.
  */
-function openCard(a, b, s){
+function openCard(a, b, s, card){
     console.log(a +" "+ b);
+
 
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED) {
@@ -17,7 +18,8 @@ function openCard(a, b, s){
     }
     //this.labelInstructions = new cc.LabelTTF("Drink!");
     //this.labelInstructions.setColor(cc.color(0,0,0));
-    var MySprite = new cc.Sprite("res/card3.png");
+    var MySprite = new cc.Sprite(card);
+
 
     var next = new ccui.Button();
     next.loadTextures("res/check.png", "res/check.png", " ");

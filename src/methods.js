@@ -20,6 +20,13 @@ function createTable(s) {
         content.push("res/tutvumis");
         content.push("res/naughty");
     }
+    var cards = [];
+    for (var i = 0; i < 5; i++) {
+        cards.push("res/card1.png");
+        cards.push("res/card2.png");
+        cards.push("res/card3.png");
+
+    }
     var map = [];
 
 
@@ -28,8 +35,8 @@ function createTable(s) {
             var uus = event.name.split(" ");
             var test = uus[0].toString() + " " + uus[1].toString();
             var array = map[test];
-
-            openCard(array[0].x, array[0].y, s);
+            openCard(array[0].x, array[0].y, s, cards[0]);
+            cards.splice(0,1);
             var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
             hero.runAction(moveTo);
             if (asukoht[0] != null) {
