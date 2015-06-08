@@ -1,7 +1,7 @@
 /**
  * Created by Spikey on 16.05.2015.
  */
-function openCard(a, b, s, card){
+function openCard(a, b, s, card, allPossibleTasks){
     console.log(a +" "+ b);
 
 
@@ -31,15 +31,16 @@ function openCard(a, b, s, card){
     var contentText = new ccui.Text;
     var widgetSize = layout.getContentSize();
     contentText.attr({
-        string: "Lorem ipsum dolor sit amet dfowefiowerjfiowejfiowejpvowefjpowejbopjwefpobiwejiobjwepofwio",
+        string: allPossibleTasks[card][Math.floor((Math.random() * allPossibleTasks[card].length - 1) + 1)],
         fontName: "Marker Felt",
-        anchorX: 0.5,
-        anchorY: -1,
-        x: widgetSize.width / 2.0,
-        y: widgetSize.height / 2.0
+        anchorX: 1,
+        anchorY: 1,
+        x: widgetSize.width,
+        y: widgetSize.height
     });
-    //contentText.ignoreContentAdaptWithSize(false);
+
     contentText.setContentSize(cc.size(400,400));
+    contentText.ignoreContentAdaptWithSize(false);
 
     var next = new ccui.Button();
     next.loadTextures("res/check.png", "res/check.png", " ");

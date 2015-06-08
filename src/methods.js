@@ -12,7 +12,7 @@ function createTable(s) {
     //praegu on firstTime all alert, mis teatab, kui on esimene kord. Siis saame seda testida native appina.
     //TODO: UNCOMMENT IF CLAUSE FOR FINAL VERSION. ALSO UNCOMMENT WHEN TESTING ON WINDOWS, ALSO UNCOMMENT IN firstTime().
     //if (ls.getItem("keys") == null){
-        firstTime();
+    firstTime();
     //}
 
     // allPossibleTasks on hashMap, kus võtmeteks on kategooriad ja väärtusteks arrayList, kus on kõik võimalikud taskid.
@@ -45,9 +45,9 @@ function createTable(s) {
             var uus = event.name.split(" ");
             var test = uus[0].toString() + " " + uus[1].toString();
             var array = map[test];
-            if (array[0].switch){
-                openCard(array[0].x, array[0].y, s, cards[0]);
-                cards.splice(0,1);
+            if (array[0].switch) {
+                openCard(array[0].x, array[0].y, s, array[0].type.slice(4), allPossibleTasks);
+                cards.splice(0, 1);
                 //var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
                 //hero.runAction(moveTo);
                 if (asukoht[0] != null) {
@@ -69,7 +69,6 @@ function createTable(s) {
             var temp = new ccui.Button();
             temp.x = cc.winSize.width / 6 * i;
             temp.y = cc.winSize.height / 6 * j;
-            temp.switch = !!(i == 0 && j == 2);
             x = i - 1;
             y = j - 1;
             temp.addTouchEventListener(onMouseUp, this);
@@ -92,13 +91,14 @@ function createTable(s) {
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
             if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
                 if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
-                    if (asukoht[1] - y != 0 && asukoht[0] - x != 0){
+                    if (asukoht[1] - y != 0 && asukoht[0] - x != 0) {
                         temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
                         temp.setScale(0.7, 0.7);
                         temp.switch = false;
                     }
                     else {
                         temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + "1.png", " ");
+                        temp.type = map[temp.name][1];
                         temp.setScale(0.7, 0.7);
                         temp.switch = true;
                         win++;
@@ -127,13 +127,14 @@ function createTable(s) {
             temp.switch = false;
         }
     }
+
     function firstTime() {
         //TODO: OUR CONTENT GOES HERE
         var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
         var drinking = ["Programmers drink!", "Pick three people to share their drinks with anyone who wishes", "Bottoms up!"];
         var sporty = ["Jump off a cliff!", "Do jumping jacks!", "Do a barrel roll!"];
         var brainy = ["Think reallllly hard", "Riddle the person to your right", "Ask the impossible question"];
-        var tutvumis = ["Ask the second person on your left three personal questions","Everyone say their name","please someone, let me out, i'm stuck in the card printing mach"];
+        var tutvumis = ["Ask the second person on your left three personal questions", "Everyone say their name", "please someone, let me out, i'm stuck in the card printing mach"];
         var naughty = ["Lick a shoe or smth", "I don't know what you young people do.", "Back in my day..."];
         //TODO: IF TESTING ON WINDOWS, UNCOMMENT. CHECKS IF IT DOES ACTUALLY SAVE.
         //alert("Esimene kord!");
@@ -144,25 +145,27 @@ function createTable(s) {
         ls.setItem("tutvumis", tutvumis);
         ls.setItem("naughty", naughty);
     }
+
     function fullRefresh() {
         win = 0;
-            for (i = 1; i < 6; i++) {
-                for (j = 1; j < 6; j++) {
-                    refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
-                }
+        for (i = 1; i < 6; i++) {
+            for (j = 1; j < 6; j++) {
+                refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
             }
-        if (win==1){
+        }
+        if (win == 1) {
             console.log("Game Over");
             //WIN STATE CONFIRMED!!!!
             //INSERT FUNCTION HERE!!!
         }
-        }
+    }
+
     function createMap() {
         var map = {};
         var toLoop = ls.getItem("keys").split(",");
-        for (var i = 0; i < toLoop.length; i++){
+        for (var i = 0; i < toLoop.length; i++) {
             map[toLoop[i]] = ls.getItem(toLoop[i]).split(",");
         }
         return map;
     }
-    }
+}
