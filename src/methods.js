@@ -61,7 +61,6 @@ function createTable(s) {
             x = i - 1;
             y = j - 1;
             temp.addTouchEventListener(onMouseUp, this);
-            temp.loadTextures("res/active.png", "res/a4.png", " ");
             s.addChild(temp, 201);
             temp.name = (i - 1).toString() + " " + (j - 1).toString();
             var randInt = Math.floor(Math.random() * (content.length));
