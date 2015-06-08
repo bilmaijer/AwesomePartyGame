@@ -18,6 +18,8 @@ function createTable(s) {
     // allPossibleTasks on hashMap, kus võtmeteks on kategooriad ja väärtusteks arrayList, kus on kõik võimalikud taskid.
     // SEDA HASHMAPI KASUTADA EVENTLISTENERIS, MITTE LOCAL STORAGE'T.
     var allPossibleTasks = createMap();
+
+
     //buttonite tegemise asi randomiga
 
     var content = [];
@@ -46,8 +48,8 @@ function createTable(s) {
             if (array[0].switch){
                 openCard(array[0].x, array[0].y, s, cards[0]);
                 cards.splice(0,1);
-                var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
-                hero.runAction(moveTo);
+                //var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
+                //hero.runAction(moveTo);
                 if (asukoht[0] != null) {
                     kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
                     asukoht = uus;
@@ -79,10 +81,10 @@ function createTable(s) {
         }
     }
 
-    var hero = new cc.Sprite();
-    hero.x = cc.winSize.width / 2;
-    hero.y = cc.winSize.height / 12;
-    s.addChild(hero, 250);
+    //var hero = new cc.Sprite();
+    //hero.x = cc.winSize.width / 2;
+    //hero.y = cc.winSize.height / 12;
+    //s.addChild(hero, 250);
 
     // L�hedal asuvate ruutude kontroll ja ikooni muutus
 

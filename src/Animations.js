@@ -18,7 +18,28 @@ function openCard(a, b, s, card){
     //this.labelInstructions = new cc.LabelTTF("Drink!");
     //this.labelInstructions.setColor(cc.color(0,0,0));
     var MySprite = new cc.Sprite(card);
-
+    var layout = new ccui.Layout();
+    layout.attr({
+        anchorX: 0.5,
+        anchorY: 0.5,
+        x: a,
+        y: b
+    });
+    layout.setBackGroundColorType(ccui.Layout.BG_COLOR_SOLID);
+    layout.setBackGroundColor(cc.color(222, 214, 185));
+    layout.setContentSize(cc.size(400, 400));
+    var contentText = new ccui.Text;
+    var widgetSize = layout.getContentSize();
+    contentText.attr({
+        string: "Lorem ipsum dolor sit amet dfowefiowerjfiowejfiowejpvowefjpowejbopjwefpobiwejiobjwepofwio",
+        fontName: "Marker Felt",
+        anchorX: 0.5,
+        anchorY: -1,
+        x: widgetSize.width / 2.0,
+        y: widgetSize.height / 2.0
+    });
+    //contentText.ignoreContentAdaptWithSize(false);
+    contentText.setContentSize(cc.size(400,400));
 
     var next = new ccui.Button();
     next.loadTextures("res/check.png", "res/check.png", " ");
@@ -34,27 +55,28 @@ function openCard(a, b, s, card){
 
     //MySprite.setScale(0.25);
 
+    //MySprite.flipY = true;
     MySprite.attr({
         x: a,
         y: b,
         scale: 1,
         rotation: 0
     });
-    //MySprite.flipY = true;
 
     next.setPosition(200, 70);
     //MySprite.setScale(0,01);
 
     //MySprite.addChild(this.labelInstructions, 252);
-    MySprite.addChild(next, 252);
-    s.addChild(MySprite, 251);
+    layout.addChild(next, 252);
+    layout.addChild(contentText, 252);
+    s.addChild(layout, 251);
 
 
     var x = cc.winSize.width/2;
     var y = cc.winSize.height/2;
 
     //this.sprite
-    MySprite.runAction(
+    layout.runAction(
         cc.spawn(
             //cc.scaleTo(1,0.5,0.5),
             cc.moveTo(1,x,y)
