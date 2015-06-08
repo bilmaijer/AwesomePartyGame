@@ -5,7 +5,6 @@ var GameBoardLayer = cc.Layer.extend({
     sprite: null,
     ctor: function () {
         this._super();
-        var a = {};
         createTable(this);
         return true;
     }
