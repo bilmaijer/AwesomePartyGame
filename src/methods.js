@@ -7,7 +7,12 @@ function createTable(s) {
     var i;
     var j;
     var kasutatud = [];
-
+    var ls = cc.sys.localStorage;
+    //esimese korra funktsioon käivitatakse ainult siis, kui tuvastatakse, et local storage's puudub "keys"
+    //praegu on firstTime all alert, mis teatab, kui on esimene kord. Siis saame seda testida native appina.
+    if (ls.getItem("keys") == null){
+        firstTime();
+    }
     //buttonite tegemise asi randomiga
 
     var content = [];
@@ -115,13 +120,27 @@ function createTable(s) {
             temp.switch = false;
         }
     }
-
+    function firstTime() {
+        //TODO: OUR CONTENT GOES HERE
+        var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
+        var drinking = ["Programmers drink!", "Pick three people to share their drinks with anyone who wishes", "Bottoms up!"];
+        var sporty = ["Jump off a cliff!", "Do jumping jacks!", "Do a barrel roll!"];
+        var brainy = ["Think reallllly hard", "Riddle the person to your right", "Ask the impossible question"];
+        var tutvumis = ["Ask the second person on your left three personal questions","Everyone say their name","please someone, let me out, i'm stuck in the card printing mach"];
+        var naughty = ["Lick a shoe or smth", "I don't know what you young people do.", "Back in my day..."];
+        alert("Esimene kord!");
+        ls.setItem("keys", keys);
+        ls.setItem("drinking", drinking);
+        ls.setItem("sporty", sporty);
+        ls.setItem("brainy", brainy);
+        ls.setItem("tutvumis", tutvumis);
+        ls.setItem("naughty", naughty);
+    }
     function fullRefresh() {
         win = 0;
             for (i = 1; i < 6; i++) {
                 for (j = 1; j < 6; j++) {
                     refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
-                    console.log(win);
                 }
             }
         if (win==1){
