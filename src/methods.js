@@ -10,9 +10,10 @@ function createTable(s) {
     var ls = cc.sys.localStorage;
     //esimese korra funktsioon käivitatakse ainult siis, kui tuvastatakse, et local storage's puudub "keys"
     //praegu on firstTime all alert, mis teatab, kui on esimene kord. Siis saame seda testida native appina.
-    if (ls.getItem("keys") == null){
+    //TODO: uncomment if clause for final version.
+    //if (ls.getItem("keys") == null){
         firstTime();
-    }
+    //}
     //buttonite tegemise asi randomiga
 
     var content = [];
