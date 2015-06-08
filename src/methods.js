@@ -33,14 +33,16 @@ function createTable(s) {
             var uus = event.name.split(" ");
             var test = uus[0].toString() + " " + uus[1].toString();
             var array = map[test];
-            openCard(array[0].x, array[0].y, s, cards[0]);
-            cards.splice(0,1);
-            var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
-            hero.runAction(moveTo);
-            if (asukoht[0] != null) {
-                kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
-                asukoht = uus;
-                fullRefresh();
+            if (array[0].switch){
+                openCard(array[0].x, array[0].y, s, cards[0]);
+                cards.splice(0,1);
+                var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
+                hero.runAction(moveTo);
+                if (asukoht[0] != null) {
+                    kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
+                    asukoht = uus;
+                    fullRefresh();
+                }
             }
         }
     }
@@ -55,8 +57,10 @@ function createTable(s) {
             var temp = new ccui.Button();
             temp.x = cc.winSize.width / 6 * i;
             temp.y = cc.winSize.height / 6 * j;
+            temp.switch = !!(i == 0 && j == 2);
             x = i - 1;
             y = j - 1;
+            temp.addTouchEventListener(onMouseUp, this);
             temp.loadTextures("res/active.png", "res/a4.png", " ");
             s.addChild(temp, 201);
             temp.name = (i - 1).toString() + " " + (j - 1).toString();
@@ -71,7 +75,7 @@ function createTable(s) {
     hero.y = cc.winSize.height / 12;
     s.addChild(hero, 250);
 
-    // Lähedal asuvate ruutude kontroll ja ikooni muutus
+    // Lï¿½hedal asuvate ruutude kontroll ja ikooni muutus
 
     function refresh(x, y, temp) {
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
@@ -80,31 +84,36 @@ function createTable(s) {
                     if (asukoht[1] - y != 0 && asukoht[0] - x != 0){
                         temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
                         temp.setScale(0.7, 0.7);
+                        temp.switch = false;
                     }
                     else {
                         temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + "1.png", " ");
-                        temp.addTouchEventListener(onMouseUp, this);
                         temp.setScale(0.7, 0.7);
+                        temp.switch = true;
                         win++;
                     }
                 }
                 else {
                     temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
                     temp.setScale(0.7, 0.7);
+                    temp.switch = false;
                 }
             }
             else {
                 temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
                 temp.setScale(0.7, 0.7);
+                temp.switch = false;
             }
         }
         else {
             temp.loadTextures("res/done.png", "res/done.png", " ");
             temp.setScale(0.7, 0.7);
+            temp.switch = false;
         }
         if (asukoht[0] - x == 0 && asukoht[1] - y == 0) {
             temp.loadTextures("res/done.png", "res/done.png", " ");
             temp.setScale(0.7, 0.7);
+            temp.switch = false;
         }
     }
 

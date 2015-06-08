@@ -55,9 +55,9 @@ var HelloWorldLayer = cc.Layer.extend({
 
 
         //this.sprite
-       MySprite.runAction(
+        MySprite.runAction(
             cc.sequence(
-                cc.scaleTo(2,1,1)
+                cc.scaleTo(2, 1, 1)
                 //cc.rotateTo(2,0)
 
             )
@@ -73,18 +73,18 @@ var HelloWorldLayer = cc.Layer.extend({
         //this.addChild(SpriteSheet,1);
 
         // Push the frames for animation
-       /* var animFrames = ["res/a1.png", "res/a2.png", "res/a3png];
+        /* var animFrames = ["res/a1.png", "res/a2.png", "res/a3png];
 
 
 
-        // taadaa ...!!  Animate the sprites
-        var animation = cc.Animation(animFrames, 0.06);
-        var sprite = cc.Sprite.createWithSpriteFrameName(res.a1_png);
-        sprite.setAnchorPoint(0.5,0.5); // optional
-        sprite.setScale(1.0,1.0); // optional
-        sprite.setPosition(50, 50);
-        sprite.runAction(cc.RepeatForever(cc.Animate(animation)));
-        this.addChild(sprite,1);*/
+         // taadaa ...!!  Animate the sprites
+         var animation = cc.Animation(animFrames, 0.06);
+         var sprite = cc.Sprite.createWithSpriteFrameName(res.a1_png);
+         sprite.setAnchorPoint(0.5,0.5); // optional
+         sprite.setScale(1.0,1.0); // optional
+         sprite.setPosition(50, 50);
+         sprite.runAction(cc.RepeatForever(cc.Animate(animation)));
+         this.addChild(sprite,1);*/
         return true;
     }
 });
