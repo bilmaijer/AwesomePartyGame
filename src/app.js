@@ -89,11 +89,10 @@ var HelloWorldLayer = cc.Layer.extend({
     }
 });
 
-var HelloWorldScene = cc.Scene.extend({
-    onEnter: function () {
-        this._super();
-        var layer = new HelloWorldLayer();
-        this.addChild(layer);
-    }
-});
-
+//var HelloWorldScene = cc.Scene.extend({
+//    onEnter: function () {
+//        this._super();
+//        var layer = new HelloWorldLayer();
+//        this.addChild(layer);
+//    }
+//});

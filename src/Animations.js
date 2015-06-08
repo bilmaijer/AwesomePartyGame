@@ -10,7 +10,6 @@ function openCard(a, b, s, card){
             event.getParent().runAction(
                 cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
             )
-            
 
         }
         //var array = map[event];
@@ -43,17 +42,12 @@ function openCard(a, b, s, card){
     });
     //MySprite.flipY = true;
 
-
-
-
     next.setPosition(200, 70);
     //MySprite.setScale(0,01);
 
     //MySprite.addChild(this.labelInstructions, 252);
     MySprite.addChild(next, 252);
     s.addChild(MySprite, 251);
-
-
 
 
     var x = cc.winSize.width/2;

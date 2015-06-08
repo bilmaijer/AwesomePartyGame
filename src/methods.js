@@ -5,15 +5,13 @@ function createTable(s) {
 
     var i;
     var j;
-    var array;
     var kasutatud = [];
-    var uus;
-    var test;
 
     //buttonite tegemise asi randomiga
 
     var content = [];
-    for (i = 0; i < 5; i++) {
+
+    for (var l = 0; l < 5; l++) {
         content.push("res/drinking");
         content.push("res/sporty");
         content.push("res/brainy");
@@ -21,14 +19,13 @@ function createTable(s) {
         content.push("res/naughty");
     }
     var cards = [];
-    for (var i = 0; i < 5; i++) {
+    for (var k = 0; k < 5; k++) {
         cards.push("res/card1.png");
         cards.push("res/card2.png");
         cards.push("res/card3.png");
-
     }
-    var map = [];
 
+    var map = [];
 
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED) {
@@ -50,8 +47,8 @@ function createTable(s) {
     //buttonite tegemise asi randomiga
 
     var asukoht = [2, -1];
+    //var empty = new ccui.Widget();
 
-    var empty = new ccui.Widget();
     for (i = 1; i < 6; i++) {
         for (j = 1; j < 6; j++) {
             var temp = new ccui.Button();
@@ -65,23 +62,29 @@ function createTable(s) {
             var randInt = Math.floor(Math.random() * (content.length));
             map[temp.name] = [temp, content[randInt]];
             refresh(x, y, temp);
+            checkWin(x, y, temp);
         }
     }
+    console.log(map.size);
+
     var hero = new cc.Sprite();
     hero.x = cc.winSize.width / 2;
     hero.y = cc.winSize.height / 12;
     s.addChild(hero, 250);
 
-        function refresh(x, y, temp) {
-            if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
-                if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
-                    if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
-                        temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + "1.png", " ");
-                        temp.addTouchEventListener(onMouseUp, this);
+    // Lähedal asuvate ruutude kontroll ja ikooni muutus
+
+    function refresh(x, y, temp) {
+        if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
+            if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
+                if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
+                    if (asukoht[1] - y != 0 && asukoht[0] - x != 0){
+                        temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
                         temp.setScale(0.7, 0.7);
                     }
                     else {
-                        temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
+                        temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + "1.png", " ");
+                        temp.addTouchEventListener(onMouseUp, this);
                         temp.setScale(0.7, 0.7);
                     }
                 }
@@ -91,12 +94,25 @@ function createTable(s) {
                 }
             }
             else {
-                temp.loadTextures("res/c5.png", "res/c5.png", " ");
+                temp.loadTextures("res/inactive.png", "res/inactive.png", " ");
                 temp.setScale(0.7, 0.7);
             }
         }
+        else {
+            temp.loadTextures("res/done.png", "res/done.png", " ");
+            temp.setScale(0.7, 0.7);
+        }
+        if (asukoht[0] - x == 0 && asukoht[1] - y == 0) {
+            temp.loadTextures("res/done.png", "res/done.png", " ");
+            temp.setScale(0.7, 0.7);
+        }
+    }
 
-        function fullRefresh() {
+    function checkWin(x, y, temp){
+
+    }
+
+    function fullRefresh() {
             for (i = 1; i < 6; i++) {
                 for (j = 1; j < 6; j++) {
 
