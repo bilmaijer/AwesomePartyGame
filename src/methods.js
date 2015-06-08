@@ -10,10 +10,14 @@ function createTable(s) {
     var ls = cc.sys.localStorage;
     //esimese korra funktsioon käivitatakse ainult siis, kui tuvastatakse, et local storage's puudub "keys"
     //praegu on firstTime all alert, mis teatab, kui on esimene kord. Siis saame seda testida native appina.
-    //TODO: uncomment if clause for final version.
+    //TODO: UNCOMMENT IF CLAUSE FOR FINAL VERSION. ALSO UNCOMMENT WHEN TESTING ON WINDOWS, ALSO UNCOMMENT IN firstTime().
     //if (ls.getItem("keys") == null){
         firstTime();
     //}
+
+    // allPossibleTasks on hashMap, kus võtmeteks on kategooriad ja väärtusteks arrayList, kus on kõik võimalikud taskid.
+    // SEDA HASHMAPI KASUTADA EVENTLISTENERIS, MITTE LOCAL STORAGE'T.
+    var allPossibleTasks = createMap();
     //buttonite tegemise asi randomiga
 
     var content = [];
@@ -129,7 +133,8 @@ function createTable(s) {
         var brainy = ["Think reallllly hard", "Riddle the person to your right", "Ask the impossible question"];
         var tutvumis = ["Ask the second person on your left three personal questions","Everyone say their name","please someone, let me out, i'm stuck in the card printing mach"];
         var naughty = ["Lick a shoe or smth", "I don't know what you young people do.", "Back in my day..."];
-        alert("Esimene kord!");
+        //TODO: IF TESTING ON WINDOWS, UNCOMMENT. CHECKS IF IT DOES ACTUALLY SAVE.
+        //alert("Esimene kord!");
         ls.setItem("keys", keys);
         ls.setItem("drinking", drinking);
         ls.setItem("sporty", sporty);
@@ -150,4 +155,12 @@ function createTable(s) {
             //INSERT FUNCTION HERE!!!
         }
         }
+    function createMap() {
+        var map = {};
+        var toLoop = ls.getItem("keys").split(",");
+        for (var i = 0; i < toLoop.length; i++){
+            map[toLoop[i]] = ls.getItem(toLoop[i]).split(",");
+        }
+        return map;
+    }
     }
