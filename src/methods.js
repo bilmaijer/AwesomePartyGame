@@ -3,6 +3,7 @@
  */
 function createTable(s) {
 
+    var win;
     var i;
     var j;
     var kasutatud = [];
@@ -48,7 +49,7 @@ function createTable(s) {
 
     var asukoht = [2, -1];
     //var empty = new ccui.Widget();
-
+    win = 0;
     for (i = 1; i < 6; i++) {
         for (j = 1; j < 6; j++) {
             var temp = new ccui.Button();
@@ -62,10 +63,8 @@ function createTable(s) {
             var randInt = Math.floor(Math.random() * (content.length));
             map[temp.name] = [temp, content[randInt]];
             refresh(x, y, temp);
-            checkWin(x, y, temp);
         }
     }
-    console.log(map.size);
 
     var hero = new cc.Sprite();
     hero.x = cc.winSize.width / 2;
@@ -86,6 +85,7 @@ function createTable(s) {
                         temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + "1.png", " ");
                         temp.addTouchEventListener(onMouseUp, this);
                         temp.setScale(0.7, 0.7);
+                        win++;
                     }
                 }
                 else {
@@ -108,16 +108,18 @@ function createTable(s) {
         }
     }
 
-    function checkWin(x, y, temp){
-
-    }
-
     function fullRefresh() {
+        win = 0;
             for (i = 1; i < 6; i++) {
                 for (j = 1; j < 6; j++) {
-
                     refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
+                    console.log(win);
                 }
             }
+        if (win==1){
+            console.log("Game Over");
+            //WIN STATE CONFIRMED!!!!
+            //INSERT FUNCTION HERE!!!
+        }
         }
     }
