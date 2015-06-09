@@ -6,18 +6,23 @@ function openCard(a, b, s, card, allPossibleTasks){
 
 
     function onMouseUp(event, type) {
-        if (type == ccui.Widget.TOUCH_ENDED) {
+        if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
             event.getParent().runAction(
                 cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
-            )
-
+            );
+            console.log("Did it!");
+        } else if (type == ccui.Widget.TOUCH_ENDED) {
+            //TODO: HERE COMES THE NEGATIVE SCORE THING
+            event.getParent().runAction(
+                cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
+            );
+            console.log("Didn't do it!");
         }
         //var array = map[event];
         //penCard(array.get(0), array.get(1))
     }
     //this.labelInstructions = new cc.LabelTTF("Drink!");
     //this.labelInstructions.setColor(cc.color(0,0,0));
-    var MySprite = new cc.Sprite(card);
     var layout = new ccui.Layout();
     layout.attr({
         anchorX: 0.5,
@@ -46,43 +51,27 @@ function openCard(a, b, s, card, allPossibleTasks){
     allPossibleTasks[card] = allSpecificTasks;
     var next = new ccui.Button();
     next.loadTextures("res/check.png", "res/check.png", " ");
-
     next.setScale(0.4);
     next.addTouchEventListener(onMouseUp, this);
+    next.setPosition(125, 70);
+    next.didIt = true;
 
+    var decline = new ccui.Button();
+    decline.loadTextures("res/decline.png", "res/decline.png", " ");
+    decline.setScale(0.2);
+    decline.addTouchEventListener(onMouseUp, this);
+    decline.setPosition(275, 70);
+    decline.didIt = false;
 
-
-
-
-    //this.labelInstructions.setPosition(labelX/2, labelY/2);
-
-    //MySprite.setScale(0.25);
-
-    //MySprite.flipY = true;
-    MySprite.attr({
-        x: a,
-        y: b,
-        scale: 1,
-        rotation: 0
-    });
-
-    next.setPosition(200, 70);
-    //MySprite.setScale(0,01);
-
-    //MySprite.addChild(this.labelInstructions, 252);
+    layout.addChild(decline, 252);
     layout.addChild(next, 252);
     layout.addChild(contentText, 252);
     s.addChild(layout, 251);
 
-
-    var x = cc.winSize.width/2;
-    var y = cc.winSize.height/2;
-
-    //this.sprite
     layout.runAction(
         cc.spawn(
             //cc.scaleTo(1,0.5,0.5),
-            cc.moveTo(1,x,y)
+            cc.moveTo(1,cc.winSize.width/2,cc.winSize.height/2)
 
         )
     );
