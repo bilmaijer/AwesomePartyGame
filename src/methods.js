@@ -68,8 +68,8 @@ function createTable(s) {
             var temp = new ccui.Button();
             temp.x = cc.winSize.width / 6 * i;
             temp.y = cc.winSize.height / 6 * j;
-            x = i - 1;
-            y = j - 1;
+            var x = i - 1;
+            var y = j - 1;
             temp.addTouchEventListener(onMouseUp, this);
             s.addChild(temp, 201);
             temp.name = (i - 1).toString() + " " + (j - 1).toString();
@@ -166,5 +166,8 @@ function createTable(s) {
             map[toLoop[i]] = ls.getItem(toLoop[i]).split(",");
         }
         return map;
+    }
+    function play(){
+
     }
 }

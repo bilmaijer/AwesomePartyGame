@@ -1,4 +1,4 @@
-var HelloWorldLayer = cc.Layer.extend({
+var MainMenu = cc.Layer.extend({
     sprite: null,
     ctor: function () {
         //////////////////////////////
@@ -12,87 +12,58 @@ var HelloWorldLayer = cc.Layer.extend({
         var size = cc.winSize;
 
         // add a "close" icon to exit the progress. it's an autorelease object
-        var closeItem = new cc.MenuItemImage(
-            res.CloseNormal_png,
-            res.CloseSelected_png,
-            function () {
-                cc.log("Menu is clicked!");
-            }, this);
-        closeItem.attr({
-            x: size.width - 20,
-            y: 20,
-            anchorX: 0.5,
-            anchorY: 0.5
-        });
+        var playButton = new ccui.Button();
+        playButton.loadTextures("res/playButton.png", "res/playButtonPressed.png", " ");
+        playButton.type = 0;
+        playButton.x = 0;
+        playButton.y = 49;
+        playButton.addTouchEventListener(onMouseUp, this);
+        var howToPlayButton = new ccui.Button();
+        howToPlayButton.loadTextures("res/howToPlay.png", "res/howToPlayPressed.png", " ");
+        howToPlayButton.type = 1;
+        howToPlayButton.x = 0;
+        howToPlayButton.y = 0;
+        howToPlayButton.addTouchEventListener(onMouseUp, this);
+        var howNotToPlayButton = new ccui.Button();
+        howNotToPlayButton.loadTextures("res/howNotToPlay.png", "res/howNotToPlayPressed.png", " ");
+        howNotToPlayButton.type = 2;
+        howNotToPlayButton.x = 0;
+        howNotToPlayButton.y = -49;
+        howNotToPlayButton.addTouchEventListener(onMouseUp, this);
+        var highscoresButton = new ccui.Button();
+        highscoresButton.loadTextures("res/highscores.png", "res/highscoresPressed.png", " ");
+        highscoresButton.type = 3;
+        highscoresButton.x = 0;
+        highscoresButton.y = -98;
+        highscoresButton.addTouchEventListener(onMouseUp, this);
 
-        var menu = new cc.Menu(closeItem);
-        menu.x = 0;
-        menu.y = 0;
+        var menu = new ccui.Layout();
+        menu.addChild(playButton);
+        menu.addChild(howToPlayButton);
+        menu.addChild(howNotToPlayButton);
+        menu.addChild(highscoresButton);
+        menu.x = size.width / 2;
+        menu.y = size.height / 2;
+        menu.setContentSize(size);
         this.addChild(menu, 1);
 
         /////////////////////////////
         // 3. add your codes below...
-        // add a label shows "Hello World"
-        // create and initialize a label
-        var helloLabel = new cc.LabelTTF("Hello World", "Arial", 38);
-        // position the label on the center of the screen
-        helloLabel.x = size.width / 2;
-        helloLabel.y = 0;
-        // add the label as a child to this layer
-        this.addChild(helloLabel, 5);
+        function onMouseUp (event, type){
+            if (type == ccui.Widget.TOUCH_ENDED && event.type == 0){
+                cc.director.runScene(new GameboardScene());
+            }
 
+        }
 
-        // add "HelloWorld" splash screen"
-        var MySprite = new cc.Sprite("res/a1.png");
-        MySprite.attr({
-            x: size.width / 2,
-            y: size.height / 2,
-            scale: 0.2,
-            rotation: 0
-        });
-        //MySprite.flipY = true;
-        this.addChild(MySprite, 0);
-
-
-        //this.sprite
-        MySprite.runAction(
-            cc.sequence(
-                cc.scaleTo(2, 1, 1)
-                //cc.rotateTo(2,0)
-
-            )
-        );
-        helloLabel.runAction(
-            cc.spawn(
-                cc.moveBy(2.5, cc.p(0, size.height - 40)),
-                cc.tintTo(2.5, 255, 125, 0)
-            )
-        );
-        //cc.SpriteFrameCache.getInstance().addSpriteFrames(spritesheet_plist); // add Spritesheet Plist
-        //var SpriteSheet = cc.SpriteBatchNode.create(spritesheet_png);  // add Spritesheet Png
-        //this.addChild(SpriteSheet,1);
-
-        // Push the frames for animation
-        /* var animFrames = ["res/a1.png", "res/a2.png", "res/a3png];
-
-
-
-         // taadaa ...!!  Animate the sprites
-         var animation = cc.Animation(animFrames, 0.06);
-         var sprite = cc.Sprite.createWithSpriteFrameName(res.a1_png);
-         sprite.setAnchorPoint(0.5,0.5); // optional
-         sprite.setScale(1.0,1.0); // optional
-         sprite.setPosition(50, 50);
-         sprite.runAction(cc.RepeatForever(cc.Animate(animation)));
-         this.addChild(sprite,1);*/
         return true;
     }
 });
 
-//var HelloWorldScene = cc.Scene.extend({
-//    onEnter: function () {
-//        this._super();
-//        var layer = new HelloWorldLayer();
-//        this.addChild(layer);
-//    }
-//});
+var MainMenuScene = cc.Scene.extend({
+    onEnter: function () {
+        this._super();
+        var layer = new MainMenu();
+        this.addChild(layer);
+    }
+});
