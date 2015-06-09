@@ -30,18 +30,20 @@ function openCard(a, b, s, card, allPossibleTasks){
     layout.setContentSize(cc.size(400, 400));
     var contentText = new ccui.Text;
     var widgetSize = layout.getContentSize();
+    var allSpecificTasks = allPossibleTasks[card];
+    var newTaskPosition = Math.floor((Math.random() * allSpecificTasks.length - 1) + 1);
     contentText.attr({
-        string: allPossibleTasks[card][Math.floor((Math.random() * allPossibleTasks[card].length - 1) + 1)],
+        string: allSpecificTasks[newTaskPosition],
         fontName: "Marker Felt",
         anchorX: 1,
         anchorY: 1,
         x: widgetSize.width,
         y: widgetSize.height
     });
-
     contentText.setContentSize(cc.size(400,400));
     contentText.ignoreContentAdaptWithSize(false);
-
+    allSpecificTasks.splice(newTaskPosition, 1);
+    allPossibleTasks[card] = allSpecificTasks;
     var next = new ccui.Button();
     next.loadTextures("res/check.png", "res/check.png", " ");
 
