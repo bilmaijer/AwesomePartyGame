@@ -12,10 +12,11 @@
 
     "jsList" : [
         "src/resource.js",
-        "src/app.js",
+        "src/MainMenu.js",
         "src/index.js",
         "src/methods.js",
         "src/Animations.js",
-        "src/GameScene.js"
+        "src/GameScene.js",
+        "src/Configuration.js"
     ]
 }
