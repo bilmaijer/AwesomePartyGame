@@ -6,17 +6,16 @@ function openCard(a, b, s, card, allPossibleTasks){
 
 
     function onMouseUp(event, type) {
+        s.busy = false;
         if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
             event.getParent().runAction(
                 cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
             );
-            console.log("Did it!");
         } else if (type == ccui.Widget.TOUCH_ENDED) {
             //TODO: HERE COMES THE NEGATIVE SCORE THING
             event.getParent().runAction(
                 cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
             );
-            console.log("Didn't do it!");
         }
         //var array = map[event];
         //penCard(array.get(0), array.get(1))
@@ -75,5 +74,4 @@ function openCard(a, b, s, card, allPossibleTasks){
 
         )
     );
-
 }

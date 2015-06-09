@@ -7,6 +7,7 @@ function createTable(s) {
     var i;
     var j;
     var kasutatud = [];
+    s.busy = false;
     var ls = cc.sys.localStorage;
     //esimese korra funktsioon käivitatakse ainult siis, kui tuvastatakse, et local storage's puudub "keys"
     //praegu on firstTime all alert, mis teatab, kui on esimene kord. Siis saame seda testida native appina.
@@ -31,25 +32,23 @@ function createTable(s) {
         content.push("res/tutvumis");
         content.push("res/naughty");
     }
-    var cards = [];
-    for (var k = 0; k < 5; k++) {
-        cards.push("res/card1.png");
-        cards.push("res/card2.png");
-        cards.push("res/card3.png");
-    }
+    //var cards = [];
+    //for (var k = 0; k < 5; k++) {
+    //    cards.push("res/card1.png");
+    //    cards.push("res/card2.png");
+    //    cards.push("res/card3.png");
+    //}
 
     var map = [];
 
     function onMouseUp(event, type) {
-        if (type == ccui.Widget.TOUCH_ENDED) {
+        if (type == ccui.Widget.TOUCH_ENDED && !s.busy) {
             var uus = event.name.split(" ");
             var test = uus[0].toString() + " " + uus[1].toString();
             var array = map[test];
             if (array[0].switch) {
+                s.busy = true;
                 openCard(array[0].x, array[0].y, s, array[0].type.slice(4), allPossibleTasks);
-                cards.splice(0, 1);
-                //var moveTo = new cc.MoveTo(2, cc.p(array[0].x, array[0].y));
-                //hero.runAction(moveTo);
                 if (asukoht[0] != null) {
                     kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
                     asukoht = uus;
