@@ -19,7 +19,6 @@ function openCard(a, b, s, card, allPossibleTasks){
             }
         } else if (type == ccui.Widget.TOUCH_ENDED) {
             score-=25;
-            //TODO: HERE COMES THE NEGATIVE SCORE THING
             event.getParent().runAction(
                 cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
             );
