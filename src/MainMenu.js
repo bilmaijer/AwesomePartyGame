@@ -52,6 +52,12 @@ var MainMenu = cc.Layer.extend({
         function onMouseUp (event, type){
             if (type == ccui.Widget.TOUCH_ENDED && event.type == 0){
                 cc.director.runScene(new GameboardScene());
+            } else if(type == ccui.Widget.TOUCH_ENDED && event.type == 1) {
+                //TODO: HOW TO PLAY
+            } else if(type == ccui.Widget.TOUCH_ENDED && event.type == 2) {
+                //TODO: HOW NOT TO PLAY
+            } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 3) {
+                //TODO: HIGHSCORES
             }
 
         }
