@@ -1,25 +1,37 @@
 /**
  * Created by Spikey on 16.05.2015.
  */
+var counter=true;
+var end = true;
 function openCard(a, b, s, card, allPossibleTasks){
     console.log(a +" "+ b);
 
-
     function onMouseUp(event, type) {
+
         s.busy = false;
         if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
+            score+= 10;
             event.getParent().runAction(
                 cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
             );
+            if (win==1){
+                winC();
+            }
         } else if (type == ccui.Widget.TOUCH_ENDED) {
+            score-=25;
             //TODO: HERE COMES THE NEGATIVE SCORE THING
             event.getParent().runAction(
                 cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
             );
+            if (win==1){
+                winC();
+            }
         }
+
         //var array = map[event];
         //penCard(array.get(0), array.get(1))
     }
+
     //this.labelInstructions = new cc.LabelTTF("Drink!");
     //this.labelInstructions.setColor(cc.color(0,0,0));
     var layout = new ccui.Layout();
@@ -72,6 +84,17 @@ function openCard(a, b, s, card, allPossibleTasks){
             //cc.scaleTo(1,0.5,0.5),
             cc.moveTo(1,cc.winSize.width/2,cc.winSize.height/2)
 
+
         )
     );
+}
+function winC(){
+        if (counter) {
+            counter=false;
+            setTimeout(alert("Game Over!\n Your score is " + score),1000);
+            console.log("Game Over1");
+
+            //TODO: WIN STATE CONFIRMED!!!!
+            //TODO: INSERT FUNCTION CALL HERE!!!
+        }
 }

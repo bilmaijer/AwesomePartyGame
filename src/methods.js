@@ -1,9 +1,10 @@
 /**
  * Created by Spikey on 16.05.2015.
  */
-function createTable(s) {
+var score = 0;
+var win = 0;
 
-    var win;
+function createTable(s) {
     var i;
     var j;
     var kasutatud = [];
@@ -84,7 +85,7 @@ function createTable(s) {
     //hero.y = cc.winSize.height / 12;
     //s.addChild(hero, 250);
 
-    // Lï¿½hedal asuvate ruutude kontroll ja ikooni muutus
+    // Lähedal asuvate ruutude kontroll ja ikooni muutus
 
     function refresh(x, y, temp) {
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
@@ -151,11 +152,6 @@ function createTable(s) {
             for (j = 1; j < 6; j++) {
                 refresh(i - 1, j - 1, map[(i - 1).toString() + " " + (j - 1).toString()][0]);
             }
-        }
-        if (win == 1) {
-            console.log("Game Over");
-            //WIN STATE CONFIRMED!!!!
-            //INSERT FUNCTION HERE!!!
         }
     }
 
