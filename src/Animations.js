@@ -83,11 +83,10 @@ function openCard(a, b, s, card, allPossibleTasks){
         cc.spawn(
             //cc.scaleTo(1,0.5,0.5),
             cc.moveTo(1,cc.winSize.width/2,cc.winSize.height/2)
-
-
         )
     );
 }
+
 function winC(){
         if (counter) {
             counter=false;
