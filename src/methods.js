@@ -36,6 +36,9 @@ function createTable(s) {
     //}
 
     var map = [];
+
+    var where;
+    var which = 0;
     //score label
     s.labelCoin = new cc.LabelTTF("Score: " + score, "Helvetica", 20);
     s.labelCoin.setColor(cc.color(245, 245, 245));//black color
@@ -51,6 +54,19 @@ function createTable(s) {
                 openCard(array[0], s, array[0].type.slice(4), allPossibleTasks);
                 if (asukoht[0] != null) {
                     kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
+                    if (asukoht[0]>uus[0]){
+                        where = "left";
+                    }
+                    else if (asukoht[0]<uus[0]){
+                        where = "right";
+                    }
+                    else if (asukoht[1]>uus[1]){
+                        where = "down";
+                    }
+                    else{
+                        where = "up";
+                    }
+                    console.log(where);
                     asukoht = uus;
                     fullRefresh();
                 }
@@ -115,14 +131,37 @@ function createTable(s) {
                 temp.switch = false;
             }
         }
-        else {
-            temp.loadTextures("res/done.png", "res/done.png", " ");
-            temp.setScale(0.7, 0.7);
+        /*else {
+            temp.loadTextures("res/footprintR.png", "res/footprintR.png", " ");
+
+            temp.setScale(0.07, 0.07);
             temp.switch = false;
-        }
+        }*/
         if (asukoht[0] - x == 0 && asukoht[1] - y == 0) {
-            temp.loadTextures("res/done.png", "res/done.png", " ");
-            temp.setScale(0.7, 0.7);
+            if (which % 2 == 0) {
+                temp.loadTextures("res/footprintR.png", "res/footprintR.png", " ");
+            }
+            else{
+                temp.loadTextures("res/footprintL.png", "res/footprintL.png", " ");
+            }
+            which++;
+            if (where == "right") {
+                temp.attr({
+                    rotation: 90
+                });
+            }
+            else if (where == "left"){
+                temp.attr({
+                    rotation: 270
+                });
+            }
+            else if (where == "down"){
+                temp.attr({
+                    rotation: 180
+                });
+            }
+            temp.setScale(0.07, 0.07);
+
             temp.switch = false;
         }
     }
