@@ -8,30 +8,77 @@ function createTable(s) {
     var i;
     var j;
     var kasutatud = [];
-    var allPossibleTasks = createAll();
-    var map = [];
-    var asukoht = [2, -1];
-    var content = [];
     score = 0;
     win = 0;
     s.busy = false;
 
-    //score label
-    s.labelCoin = new cc.LabelTTF("Score: " + score, "Helvetica", 20);
-    s.labelCoin.setColor(cc.color(245, 245, 245));//black color
-    s.labelCoin.setPosition(cc.p(70, cc.winSize.height - 20));
-    s.addChild(s.labelCoin);
+    // allPossibleTasks on hashMap, kus võtmeteks on kategooriad ja väärtusteks arrayList, kus on kõik võimalikud taskid.
+    // SEDA HASHMAPI KASUTADA EVENTLISTENERIS, MITTE LOCAL STORAGE'T.
+    var allPossibleTasks = createAll();
+
+
+    //buttonite tegemise asi randomiga
+
+    var content = [];
 
     for (var l = 0; l < 5; l++) {
-        //buttonite tegemise asi randomiga
         content.push("res/drinking");
         content.push("res/sporty");
         content.push("res/brainy");
         content.push("res/tutvumis");
         content.push("res/naughty");
     }
+    //var cards = [];
+    //for (var k = 0; k < 5; k++) {
+    //    cards.push("res/card1.png");
+    //    cards.push("res/card2.png");
+    //    cards.push("res/card3.png");
+    //}
 
-    //buttonite tegemise algoritm randomiga
+    var map = [];
+
+    var where;
+    var which = 0;
+    //score label
+    s.labelCoin = new cc.LabelTTF("Score: " + score, "Helvetica", 20);
+    s.labelCoin.setColor(cc.color(245, 245, 245));//black color
+    s.labelCoin.setPosition(cc.p(70, cc.winSize.height - 20));
+    s.addChild(s.labelCoin);
+    function onMouseUp(event, type) {
+        if (type == ccui.Widget.TOUCH_ENDED && !s.busy) {
+            var uus = event.name.split(" ");
+            var test = uus[0].toString() + " " + uus[1].toString();
+            var array = map[test];
+            if (array[0].switch) {
+                s.busy = true;
+                openCard(array[0], s, array[0].type.slice(4), allPossibleTasks);
+                if (asukoht[0] != null) {
+                    kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
+                    if (asukoht[0]>uus[0]){
+                        where = "left";
+                    }
+                    else if (asukoht[0]<uus[0]){
+                        where = "right";
+                    }
+                    else if (asukoht[1]>uus[1]){
+                        where = "down";
+                    }
+                    else{
+                        where = "up";
+                    }
+                    console.log(where);
+                    asukoht = uus;
+                    fullRefresh();
+                }
+            }
+        }
+    }
+
+    //buttonite tegemise asi randomiga
+
+    var asukoht = [2, -1];
+    //var empty = new ccui.Widget();
+    win = 0;
     for (i = 1; i < 6; i++) {
         for (j = 1; j < 6; j++) {
             var temp = new ccui.Button();
@@ -48,6 +95,10 @@ function createTable(s) {
         }
     }
 
+    //var hero = new cc.Sprite();
+    //hero.x = cc.winSize.width / 2;
+    //hero.y = cc.winSize.height / 12;
+    //s.addChild(hero, 250);
 
     // L�hedal asuvate ruutude kontroll ja ikooni muutus
 
@@ -80,17 +131,41 @@ function createTable(s) {
                 temp.switch = false;
             }
         }
-        else {
-            temp.loadTextures("res/done.png", "res/done.png", " ");
-            temp.setScale(0.7, 0.7);
+        /*else {
+            temp.loadTextures("res/footprintR.png", "res/footprintR.png", " ");
+
+            temp.setScale(0.07, 0.07);
             temp.switch = false;
-        }
+        }*/
         if (asukoht[0] - x == 0 && asukoht[1] - y == 0) {
-            temp.loadTextures("res/done.png", "res/done.png", " ");
-            temp.setScale(0.7, 0.7);
+            if (which % 2 == 0) {
+                temp.loadTextures("res/footprintR.png", "res/footprintR.png", " ");
+            }
+            else{
+                temp.loadTextures("res/footprintL.png", "res/footprintL.png", " ");
+            }
+            which++;
+            if (where == "right") {
+                temp.attr({
+                    rotation: 90
+                });
+            }
+            else if (where == "left"){
+                temp.attr({
+                    rotation: 270
+                });
+            }
+            else if (where == "down"){
+                temp.attr({
+                    rotation: 180
+                });
+            }
+            temp.setScale(0.07, 0.07);
+
             temp.switch = false;
         }
     }
+
 
     function fullRefresh() {
         win = 0;
@@ -110,7 +185,6 @@ function createTable(s) {
     //    }
     //    return map;
     //}
-
     function createAll() {
         //TODO: OUR CONTENT GOES HERE
         var map = {};
@@ -128,22 +202,5 @@ function createTable(s) {
         map["tutvumis"] = tutvumis;
         map["naughty"] = naughty;
         return map;
-    }
-
-    function onMouseUp(event, type) {
-        if (type == ccui.Widget.TOUCH_ENDED && !s.busy) {
-            var uus = event.name.split(" ");
-            var test = uus[0].toString() + " " + uus[1].toString();
-            var array = map[test];
-            if (array[0].switch) {
-                s.busy = true;
-                openCard(array[0], s, array[0].type.slice(4), allPossibleTasks);
-                if (asukoht[0] != null) {
-                    kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
-                    asukoht = uus;
-                    fullRefresh();
-                }
-            }
-        }
     }
 }

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3f6fe52-c550-4fd3-bcef-0bfeece7a6fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/decline.png" afterPath="$PROJECT_DIR$/res/decline.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Animations.js" afterPath="$PROJECT_DIR$/src/Animations.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EndScene.js" afterPath="$PROJECT_DIR$/src/EndScene.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/methods.js" afterPath="$PROJECT_DIR$/src/methods.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/MainMenu.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,27 +56,27 @@
         <entry file="file://$PROJECT_DIR$/src/methods.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="141" column="34" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
+              <caret line="157" column="38" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EndScene.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EndScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EndScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33243242">
+            <state vertical-scroll-proportion="-13.4827585">
               <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Animations.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Animations.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Animations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.31829575">
+              <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
               <folding>
                 <marker date="1434131418602" expanded="true" signature="3094:3096" placeholder="{...}" />
               </folding>
@@ -106,10 +105,10 @@
         <option value="$PROJECT_DIR$/src/GameScene.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/src/MainMenu.js" />
-        <option value="$PROJECT_DIR$/src/EndScene.js" />
-        <option value="$PROJECT_DIR$/src/Animations.js" />
         <option value="$PROJECT_DIR$/frameworks/runtime-src/proj.win8.1-universal/Debug/MyGame.Windows/AppX/Assets/Resources/src/methods.js" />
         <option value="$PROJECT_DIR$/src/methods.js" />
+        <option value="$PROJECT_DIR$/src/EndScene.js" />
+        <option value="$PROJECT_DIR$/src/Animations.js" />
       </list>
     </option>
   </component>
@@ -554,7 +553,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434109938434</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="merge">
+      <created>1434131591099</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1434131591099</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -905,7 +910,7 @@
     <entry file="file://$PROJECT_DIR$/src/MainMenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -936,29 +941,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Animations.js">
+    <entry file="file://$PROJECT_DIR$/src/EndScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
-          <folding>
-            <marker date="1434131418602" expanded="true" signature="3094:3096" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="-13.4827585">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/methods.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="141" column="34" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
+          <caret line="157" column="38" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EndScene.js">
+    <entry file="file://$PROJECT_DIR$/src/Animations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33243242">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
+        <state vertical-scroll-proportion="0.31829575">
+          <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+          <folding>
+            <marker date="1434131418602" expanded="true" signature="3094:3096" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
