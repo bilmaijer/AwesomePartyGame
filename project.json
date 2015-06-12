@@ -19,5 +19,8 @@
         "src/GameScene.js",
         "src/Configuration.js",
         "src/EndScene.js"
+        "src/Configuration.js",
+        "src/HowToPlay.js",
+        "src/NotHowToPlay.js"
     ]
 }

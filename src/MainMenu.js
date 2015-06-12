@@ -56,9 +56,11 @@ var MainMenu = cc.Layer.extend({
             if (type == ccui.Widget.TOUCH_ENDED && event.type == 0){
                 cc.director.runScene(new GameBoardScene());
             } else if(type == ccui.Widget.TOUCH_ENDED && event.type == 1) {
-                //TODO: HOW TO PLAY
+                cc.director.runScene(new HowToPlayScene());
             } else if(type == ccui.Widget.TOUCH_ENDED && event.type == 2) {
-                //TODO: HOW NOT TO PLAY
+                cc.director.runScene(new NotHowToPlayScene());
+            } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 3) {
+                //TODO: HIGHSCORES
             }
         }
         return true;
