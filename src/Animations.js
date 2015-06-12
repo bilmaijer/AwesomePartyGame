@@ -4,7 +4,7 @@
 var end = true;
 var cumulative = 5;
 function openCard(temp, s, card, allPossibleTasks) {
-    function onMouseUp(event, type) {
+    /*function onMouseUp(event, type) {
         s.busy = false;
         if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
             cumulative += 5;
@@ -29,7 +29,7 @@ function openCard(temp, s, card, allPossibleTasks) {
 
         //var array = map[event];
         //penCard(array.get(0), array.get(1))
-    }
+    }*/
 
     //this.labelInstructions = new cc.LabelTTF("Drink!");
     //this.labelInstructions.setColor(cc.color(0,0,0));
@@ -58,7 +58,6 @@ function openCard(temp, s, card, allPossibleTasks) {
     console.log(contentText.x);
     contentText.setColor(cc.color(0,0,0));
     contentText.setContentSize(cc.size(800,900));
-    console.log(contentText.getTextAreaSize());
     contentText.setScale(0.4);
     contentText.ignoreContentAdaptWithSize(false);
     contentText.setFontName(_b_getFontName(res.robota));
