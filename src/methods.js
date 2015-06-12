@@ -10,7 +10,8 @@ function createTable(s) {
     var kasutatud = [];
     s.busy = false;
     var ls = cc.sys.localStorage;
-
+    ls.setItem("Does it work?", true);
+    alert(ls.getItem("Does it work?"));
     //firstTime();
     // allPossibleTasks on hashMap, kus võtmeteks on kategooriad ja väärtusteks arrayList, kus on kõik võimalikud taskid.
     // SEDA HASHMAPI KASUTADA EVENTLISTENERIS, MITTE LOCAL STORAGE'T.
