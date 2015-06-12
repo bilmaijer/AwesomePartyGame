@@ -2,12 +2,14 @@
  * Created by Spikey on 16.05.2015.
  */
 var end = true;
+var cumulative = 5;
 function openCard(a, b, s, card, allPossibleTasks){
     function onMouseUp(event, type) {
-
         s.busy = false;
         if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
-            score+= 10;
+            cumulative += 5;
+            score+=  cumulative;
+            s.labelCoin.setString("Score: "+ score);
             event.getParent().runAction(
                 cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
             );
@@ -16,6 +18,7 @@ function openCard(a, b, s, card, allPossibleTasks){
             }
         } else if (type == ccui.Widget.TOUCH_ENDED) {
             score-=25;
+            s.labelCoin.setString("Score: "+ score);
             event.getParent().runAction(
                 cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
             );
