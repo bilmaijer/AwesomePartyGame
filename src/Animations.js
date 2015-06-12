@@ -1,11 +1,8 @@
 /**
  * Created by Spikey on 16.05.2015.
  */
-var counter=true;
 var end = true;
 function openCard(a, b, s, card, allPossibleTasks){
-    console.log(a +" "+ b);
-
     function onMouseUp(event, type) {
 
         s.busy = false;
@@ -87,12 +84,5 @@ function openCard(a, b, s, card, allPossibleTasks){
 }
 
 function winC(){
-        if (counter) {
-            counter=false;
-            setTimeout(alert("Game Over!\n Your score is " + score),1000);
-            console.log("Game Over1");
-
-            //TODO: WIN STATE CONFIRMED!!!!
-            //TODO: INSERT FUNCTION CALL HERE!!!
-        }
+    cc.director.runScene(new EndScene());
 }

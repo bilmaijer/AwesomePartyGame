@@ -1,5 +1,5 @@
 var res = {
-    //a1_png: "res/"
+    robota: {type:"font", name:"Robota", srcs:["res/RobotoSlab-Regular.ttf"]}
 };
 
 var g_resources = [];
