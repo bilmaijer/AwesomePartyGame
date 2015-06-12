@@ -33,15 +33,15 @@ var NotHowToPlay = cc.Layer.extend({
         layout.addChild(confirm, 252);
         this.addChild(layout, 251);
 
+        function onMouseUp (event, type) {
+            if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
+                cc.director.runScene(new MainMenuScene())
+            }
+        }
+
         return true;
     }
 });
-
-function onMouseUp (event, type) {
-    if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
-        cc.director.runScene(new MainMenuScene())
-    }
-}
 
 var NotHowToPlayScene = cc.Scene.extend({
     onEnter: function () {
