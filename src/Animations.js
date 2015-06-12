@@ -50,27 +50,33 @@ function openCard(temp, s, card, allPossibleTasks) {
     contentText.attr({
         string: allSpecificTasks[newTaskPosition],
         fontName: "Marker Felt",
-        anchorX: 1,
-        anchorY: 1,
-        x: widgetSize.width,
-        y: widgetSize.height
+        fontSize: 70,
+        anchorX: 0.5,
+        anchorY: 0,
+        x: widgetSize.width/2
     });
-    contentText.setContentSize(cc.size(400, 400));
+
+    contentText.setColor(cc.color(0,0,0));
+    contentText.setContentSize(cc.size(800,900));
+    contentText.setScale(0.4);
     contentText.ignoreContentAdaptWithSize(false);
+    contentText.setFontName(_b_getFontName(res.robota));
+    console.log(contentText);
     allSpecificTasks.splice(newTaskPosition, 1);
     allPossibleTasks[card] = allSpecificTasks;
     var next = new ccui.Button();
     next.loadTextures("res/check.png", "res/check.png", " ");
     next.setScale(0.4);
     next.addTouchEventListener(onMouseUp, this);
-    next.setPosition(125, 70);
+    next.setPosition(180, 70);
     next.didIt = true;
 
     var decline = new ccui.Button();
     decline.loadTextures("res/decline.png", "res/decline.png", " ");
-    decline.setScale(0.2);
+    decline.setScale(0.1);
     decline.addTouchEventListener(onMouseUp, this);
-    decline.setPosition(275, 70);
+
+    decline.setPosition(260, 50 );
     decline.didIt = false;
 
     layout.addChild(decline, 252);
