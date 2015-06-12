@@ -3,7 +3,7 @@
  */
 var end = true;
 var cumulative = 5;
-function openCard(a,b, s, card, allPossibleTasks) {
+function openCard(temp, s, card, allPossibleTasks) {
     function onMouseUp(event, type) {
         s.busy = false;
         if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
@@ -37,8 +37,8 @@ function openCard(a,b, s, card, allPossibleTasks) {
     layout.attr({
         anchorX: 0.5,
         anchorY: 0.5,
-        x: a,
-        y: b
+        x: temp.x,
+        y: temp.y
     });
     layout.setBackGroundColorType(ccui.Layout.BG_COLOR_SOLID);
     layout.setBackGroundColor(cc.color(222, 214, 185));
@@ -60,7 +60,7 @@ function openCard(a,b, s, card, allPossibleTasks) {
     contentText.setContentSize(cc.size(800,900));
     contentText.setScale(0.4);
     contentText.ignoreContentAdaptWithSize(false);
-    //contentText.setFontName(_b_getFontName(res.robota));
+    contentText.setFontName(_b_getFontName(res.robota));
 
     allSpecificTasks.splice(newTaskPosition, 1);
     allPossibleTasks[card] = allSpecificTasks;

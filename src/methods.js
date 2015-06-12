@@ -51,7 +51,7 @@ function createTable(s) {
             var array = map[test];
             if (array[0].switch) {
                 s.busy = true;
-                openCard(array[0].x, array[0].y, s, array[0].type.slice(4), allPossibleTasks);
+                openCard(array[0], s, array[0].type.slice(4), allPossibleTasks);
                 if (asukoht[0] != null) {
                     kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
                     if (asukoht[0]>uus[0]){
