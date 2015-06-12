@@ -60,7 +60,7 @@ function openCard(temp, s, card, allPossibleTasks) {
     contentText.setContentSize(cc.size(800,900));
     contentText.setScale(0.4);
     contentText.ignoreContentAdaptWithSize(false);
-    contentText.setFontName(_b_getFontName(res.robota));
+    //contentText.setFontName(_b_getFontName(res.robota));
 
     allSpecificTasks.splice(newTaskPosition, 1);
     allPossibleTasks[card] = allSpecificTasks;
