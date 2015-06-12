@@ -9,7 +9,7 @@ var GameBoardLayer = cc.Layer.extend({
         return true;
     }
 });
-var GameboardScene = cc.Scene.extend({
+var GameBoardScene = cc.Scene.extend({
     onEnter: function () {
         this._super();
         var layer = new GameBoardLayer();
