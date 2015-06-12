@@ -40,10 +40,10 @@ function createTable(s) {
     var where;
     var which = 0;
     //score label
-    s.labelCoin = new cc.LabelTTF("Score: " + score, "Helvetica", 20);
+    /*s.labelCoin = new cc.LabelTTF("Score: " + score, "Helvetica", 20);
     s.labelCoin.setColor(cc.color(245, 245, 245));//black color
     s.labelCoin.setPosition(cc.p(70, cc.winSize.height - 20));
-    s.addChild(s.labelCoin);
+    s.addChild(s.labelCoin);*/
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED && !s.busy) {
             var uus = event.name.split(" ");
