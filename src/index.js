@@ -11,6 +11,9 @@ var GameBoardLayer = cc.Layer.extend({
 });
 var GameBoardScene = cc.Scene.extend({
     onEnter: function () {
+        for (var j = 0; j<finalThemes.length;j++){
+            console.log(finalThemes[j])
+        }
         this._super();
         var layer = new GameBoardLayer();
         this.addChild(layer);

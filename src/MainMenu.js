@@ -51,7 +51,7 @@ var MainMenu = cc.Layer.extend({
         // 3. add your codes below...
         function onMouseUp(event, type) {
             if (type == ccui.Widget.TOUCH_ENDED && event.type == 0) {
-                cc.director.runScene(new GameBoardScene());
+                cc.director.runScene(new ConfigScene());
             } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 1) {
                 cc.director.runScene(new HowToPlayScene());
             } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 2) {
