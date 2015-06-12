@@ -74,10 +74,10 @@
       <file leaf-file-name="Animations.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Animations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9598998">
-              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.72431076">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
               <folding>
-                <marker date="1434133736452" expanded="true" signature="3050:3052" placeholder="{...}" />
+                <marker date="1434133960779" expanded="true" signature="3025:3027" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -582,7 +582,19 @@
       <option name="project" value="LOCAL" />
       <updated>1434133266087</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="footprints3">
+      <created>1434133799296</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1434133799296</updated>
+    </task>
+    <task id="LOCAL-00030" summary="footprints4">
+      <created>1434133899536</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1434133899536</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -638,7 +650,9 @@
     <MESSAGE value="merge" />
     <MESSAGE value="footprints" />
     <MESSAGE value="footprints2" />
-    <option name="LAST_COMMIT_MESSAGE" value="footprints2" />
+    <MESSAGE value="footprints3" />
+    <MESSAGE value="footprints4" />
+    <option name="LAST_COMMIT_MESSAGE" value="footprints4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -663,7 +677,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <marker date="1434133736452" expanded="true" signature="3050:3052" placeholder="{...}" />
+            <marker date="1434133960779" expanded="true" signature="3025:3027" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -718,7 +732,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <marker date="1434133736452" expanded="true" signature="3050:3052" placeholder="{...}" />
+            <marker date="1434133960779" expanded="true" signature="3025:3027" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -773,7 +787,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <marker date="1434133736452" expanded="true" signature="3050:3052" placeholder="{...}" />
+            <marker date="1434133960779" expanded="true" signature="3025:3027" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -828,7 +842,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1434133736452" expanded="true" signature="3050:3052" placeholder="{...}" />
+            <marker date="1434133960779" expanded="true" signature="3025:3027" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -984,10 +998,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Animations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9598998">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.72431076">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
           <folding>
-            <marker date="1434133736452" expanded="true" signature="3050:3052" placeholder="{...}" />
+            <marker date="1434133960779" expanded="true" signature="3025:3027" placeholder="{...}" />
           </folding>
         </state>
       </provider>

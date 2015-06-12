@@ -55,7 +55,7 @@ function openCard(temp, s, card, allPossibleTasks) {
         anchorY: 0,
         x: widgetSize.width/2
     });
-    console.log(contentText.x);
+
     contentText.setColor(cc.color(0,0,0));
     contentText.setContentSize(cc.size(800,900));
     contentText.setScale(0.4);
