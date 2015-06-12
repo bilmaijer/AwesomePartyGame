@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f3f6fe52-c550-4fd3-bcef-0bfeece7a6fe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Animations.js" afterPath="$PROJECT_DIR$/src/Animations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/methods.js" afterPath="$PROJECT_DIR$/src/methods.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyGame.iws" />
@@ -75,10 +74,10 @@
       <file leaf-file-name="Animations.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Animations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.46867168">
+            <state vertical-scroll-proportion="1.6190476">
               <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
               <folding>
-                <marker date="1434134185598" expanded="true" signature="3010:3012" placeholder="{...}" />
+                <marker date="1434134344357" expanded="true" signature="3010:3012" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -601,7 +600,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434133977802</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="footprints5">
+      <created>1434134213333</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1434134213333</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -659,7 +664,8 @@
     <MESSAGE value="footprints2" />
     <MESSAGE value="footprints3" />
     <MESSAGE value="footprints4" />
-    <option name="LAST_COMMIT_MESSAGE" value="footprints4" />
+    <MESSAGE value="footprints5" />
+    <option name="LAST_COMMIT_MESSAGE" value="footprints5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -684,7 +690,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <marker date="1434134185598" expanded="true" signature="3010:3012" placeholder="{...}" />
+            <marker date="1434134344357" expanded="true" signature="3010:3012" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -739,7 +745,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <marker date="1434134185598" expanded="true" signature="3010:3012" placeholder="{...}" />
+            <marker date="1434134344357" expanded="true" signature="3010:3012" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -794,7 +800,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <marker date="1434134185598" expanded="true" signature="3010:3012" placeholder="{...}" />
+            <marker date="1434134344357" expanded="true" signature="3010:3012" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -849,7 +855,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1434134185598" expanded="true" signature="3010:3012" placeholder="{...}" />
+            <marker date="1434134344357" expanded="true" signature="3010:3012" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1005,10 +1011,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Animations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.46867168">
+        <state vertical-scroll-proportion="1.6190476">
           <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding>
-            <marker date="1434134185598" expanded="true" signature="3010:3012" placeholder="{...}" />
+            <marker date="1434134344357" expanded="true" signature="3010:3012" placeholder="{...}" />
           </folding>
         </state>
       </provider>

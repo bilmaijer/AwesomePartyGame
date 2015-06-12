@@ -38,7 +38,7 @@ function openCard(a,b, s, card, allPossibleTasks) {
         anchorX: 0.5,
         anchorY: 0.5,
         x: a,
-        y: y
+        y: b
     });
     layout.setBackGroundColorType(ccui.Layout.BG_COLOR_SOLID);
     layout.setBackGroundColor(cc.color(222, 214, 185));
