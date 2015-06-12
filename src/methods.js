@@ -9,7 +9,7 @@ function createTable(s) {
     var j;
     var kasutatud = [];
     s.busy = false;
-    //var ls = cc.sys.localStorage;
+    var ls = cc.sys.localStorage;
 
     //firstTime();
     // allPossibleTasks on hashMap, kus võtmeteks on kategooriad ja väärtusteks arrayList, kus on kõik võimalikud taskid.
