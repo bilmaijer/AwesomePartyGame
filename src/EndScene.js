@@ -1,8 +1,6 @@
-/**
- * Created by Spikey on 12.06.2015.
- */
 var TheEnd = cc.Layer.extend({
     sprite: null,
+
     ctor: function () {
         this._super();
         var VictoryMessage = cc.LabelTTF.create("the end.", _b_getFontName(res.robota), 48, cc.size(300,0),cc.TEXT_ALIGNMENT_CENTER, cc.VERTICAL_TEXT_ALIGNMENT_TOP);
@@ -19,18 +17,22 @@ var TheEnd = cc.Layer.extend({
         this.addChild(ScoreMessage2);
         var PlayAgain = new ccui.Button();
         PlayAgain.loadTextures("res/playAgain.png", "res/playAgainPressed.png", " ");
-        PlayAgain.addTouchEventListener(onMouseUp, this);
         PlayAgain.setPosition(cc.winSize.width / 2, cc.winSize.height - 300);
         PlayAgain.setScale(0.6);
+        PlayAgain.addTouchEventListener(onMouseUp, this);
         this.addChild(PlayAgain);
+        function onMouseUp(event, type) {
+            if (type == ccui.Widget.TOUCH_ENDED) {
+                cc.director.runScene(new MainMenuScene());
+            }
+        }
         return true;
     }
 });
-function onMouseUp(event, type){
-    if (type == ccui.Widget.TOUCH_ENDED){
-        cc.director.runScene(new MainMenuScene());
-    }
-}
+/**
+ * Created by Spikey on 12.06.2015.
+ */
+
 var EndScene = cc.Scene.extend({
     onEnter: function () {
         this._super();
