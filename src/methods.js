@@ -134,9 +134,10 @@ function createTable(s) {
     }
 
     function createMap() {
+        var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
         var map = {};
         var toLoop = ls.getItem("keys").split(",");
-        for (var i = 0; i < toLoop.length; i++) {
+        for (var i = 0; i < keys.length; i++) {
             map[toLoop[i]] = ls.getItem(toLoop[i]).split(",");
         }
         return map;
