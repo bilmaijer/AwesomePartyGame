@@ -120,7 +120,6 @@ var ConfigLayer = cc.Layer.extend({
          this.addChild(sv);
          */
 
-
         function firstTime() {
             //TODO: OUR CONTENT GOES HERE
             var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
