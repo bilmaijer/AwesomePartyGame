@@ -137,7 +137,7 @@ function createTable(s) {
             temp.setScale(0.07, 0.07);
             temp.switch = false;
         }*/
-        /*if (asukoht[0] - x == 0 && asukoht[1] - y == 0) {
+        if (asukoht[0] - x == 0 && asukoht[1] - y == 0) {
             if (which % 2 == 0) {
                 temp.loadTextures("res/footprintR.png", "res/footprintR.png", " ");
             }
@@ -163,7 +163,7 @@ function createTable(s) {
             temp.setScale(0.07, 0.07);
 
             temp.switch = false;
-        }*/
+        }
     }
 
 
