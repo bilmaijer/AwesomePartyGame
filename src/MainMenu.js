@@ -17,31 +17,34 @@ var MainMenu = cc.Layer.extend({
         playButton.type = 0;
         playButton.x = 0;
         playButton.y = 49;
+        playButton.setScale(0.6);
         playButton.addTouchEventListener(onMouseUp, this);
         var howToPlayButton = new ccui.Button();
         howToPlayButton.loadTextures("res/howToPlay.png", "res/howToPlayPressed.png", " ");
         howToPlayButton.type = 1;
         howToPlayButton.x = 0;
         howToPlayButton.y = 0;
+        howToPlayButton.setScale(0.6);
         howToPlayButton.addTouchEventListener(onMouseUp, this);
         var howNotToPlayButton = new ccui.Button();
         howNotToPlayButton.loadTextures("res/howNotToPlay.png", "res/howNotToPlayPressed.png", " ");
         howNotToPlayButton.type = 2;
         howNotToPlayButton.x = 0;
         howNotToPlayButton.y = -49;
+        howNotToPlayButton.setScale(0.6);
         howNotToPlayButton.addTouchEventListener(onMouseUp, this);
-        var highscoresButton = new ccui.Button();
-        highscoresButton.loadTextures("res/highscores.png", "res/highscoresPressed.png", " ");
-        highscoresButton.type = 3;
-        highscoresButton.x = 0;
-        highscoresButton.y = -98;
-        highscoresButton.addTouchEventListener(onMouseUp, this);
+        //var highscoresButton = new ccui.Button();
+        //highscoresButton.loadTextures("res/highscores.png", "res/highscoresPressed.png", " ");
+        //highscoresButton.type = 3;
+        //highscoresButton.x = 0;
+        //highscoresButton.y = -98;
+        //highscoresButton.addTouchEventListener(onMouseUp, this);
 
         var menu = new ccui.Layout();
         menu.addChild(playButton);
         menu.addChild(howToPlayButton);
         menu.addChild(howNotToPlayButton);
-        menu.addChild(highscoresButton);
+        //menu.addChild(highscoresButton);
         menu.x = size.width / 2;
         menu.y = size.height / 2;
         menu.setContentSize(size);
@@ -59,9 +62,7 @@ var MainMenu = cc.Layer.extend({
             } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 3) {
                 //TODO: HIGHSCORES
             }
-
         }
-
         return true;
     }
 });
@@ -73,3 +74,11 @@ var MainMenuScene = cc.Scene.extend({
         this.addChild(layer);
     }
 });
+
+var _b_getFontName = function(resource) {
+    if (cc.sys.isNative) {
+        return resource.srcs[0];
+    } else {
+        return resource.name;
+    }
+};

@@ -8,6 +8,8 @@ function createTable(s) {
     var i;
     var j;
     var kasutatud = [];
+    score = 0;
+    win = 0;
     s.busy = false;
 
     // allPossibleTasks on hashMap, kus võtmeteks on kategooriad ja väärtusteks arrayList, kus on kõik võimalikud taskid.
