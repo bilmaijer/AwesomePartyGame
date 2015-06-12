@@ -3,26 +3,26 @@
  */
 var end = true;
 var cumulative = 5;
-function openCard(a, b, s, card, allPossibleTasks){
+function openCard(temp, s, card, allPossibleTasks) {
     function onMouseUp(event, type) {
         s.busy = false;
         if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
             cumulative += 5;
-            score+=  cumulative;
-            s.labelCoin.setString("Score: "+ score);
+            score += cumulative;
+            s.labelCoin.setString("Score: " + score);
             event.getParent().runAction(
-                cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
+                cc.moveTo(2, cc.winSize.width * 3, cc.winSize.height * 3)
             );
-            if (win==1){
+            if (win == 1) {
                 winC();
             }
         } else if (type == ccui.Widget.TOUCH_ENDED) {
-            score-=25;
-            s.labelCoin.setString("Score: "+ score);
+            score -= 25;
+            s.labelCoin.setString("Score: " + score);
             event.getParent().runAction(
-                cc.moveTo(2,cc.winSize.width*3,cc.winSize.height*3)
+                cc.moveTo(2, cc.winSize.width * 3, cc.winSize.height * 3)
             );
-            if (win==1){
+            if (win == 1) {
                 winC();
             }
         }
@@ -37,8 +37,8 @@ function openCard(a, b, s, card, allPossibleTasks){
     layout.attr({
         anchorX: 0.5,
         anchorY: 0.5,
-        x: a,
-        y: b
+        x: temp.x,
+        y: temp.y
     });
     layout.setBackGroundColorType(ccui.Layout.BG_COLOR_SOLID);
     layout.setBackGroundColor(cc.color(222, 214, 185));
@@ -55,7 +55,7 @@ function openCard(a, b, s, card, allPossibleTasks){
         x: widgetSize.width,
         y: widgetSize.height
     });
-    contentText.setContentSize(cc.size(400,400));
+    contentText.setContentSize(cc.size(400, 400));
     contentText.ignoreContentAdaptWithSize(false);
     allSpecificTasks.splice(newTaskPosition, 1);
     allPossibleTasks[card] = allSpecificTasks;
@@ -81,11 +81,11 @@ function openCard(a, b, s, card, allPossibleTasks){
     layout.runAction(
         cc.spawn(
             //cc.scaleTo(1,0.5,0.5),
-            cc.moveTo(1,cc.winSize.width/2,cc.winSize.height/2)
+            cc.moveTo(1, cc.winSize.width / 2, cc.winSize.height / 2)
         )
     );
 }
 
-function winC(){
+function winC() {
     cc.director.runScene(new EndScene());
 }

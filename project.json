@@ -16,7 +16,6 @@
         "src/index.js",
         "src/methods.js",
         "src/Animations.js",
-        "src/GameScene.js",
         "src/Configuration.js",
         "src/EndScene.js",
         "src/HowToPlay.js",

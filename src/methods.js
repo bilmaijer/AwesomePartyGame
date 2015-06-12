@@ -37,8 +37,8 @@ function createTable(s) {
 
     var map = [];
     //score label
-    s.labelCoin = new cc.LabelTTF("Score: "+ score, "Helvetica", 20);
-    s.labelCoin.setColor(cc.color(245,245,245));//black color
+    s.labelCoin = new cc.LabelTTF("Score: " + score, "Helvetica", 20);
+    s.labelCoin.setColor(cc.color(245, 245, 245));//black color
     s.labelCoin.setPosition(cc.p(70, cc.winSize.height - 20));
     s.addChild(s.labelCoin);
     function onMouseUp(event, type) {
@@ -48,7 +48,7 @@ function createTable(s) {
             var array = map[test];
             if (array[0].switch) {
                 s.busy = true;
-                openCard(array[0].x, array[0].y, s, array[0].type.slice(4), allPossibleTasks);
+                openCard(array[0], s, array[0].type.slice(4), allPossibleTasks);
                 if (asukoht[0] != null) {
                     kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
                     asukoht = uus;
@@ -155,14 +155,13 @@ function createTable(s) {
         var brainy = ["Think reallllly hard", "Riddle the person to your right", "Ask the impossible question"];
         var tutvumis = ["Ask the second person on your left three personal questions", "Everyone say their name", "please someone, let me out, i'm stuck in the card printing mach"];
         var naughty = ["Lick a shoe or smth", "I don't know what you young people do.", "Back in my day..."];
-        //TODO: IF TESTING ON WINDOWS, UNCOMMENT. CHECKS IF IT DOES ACTUALLY SAVE.
         //alert("Esimene kord!");
-        map["keys"]= keys;
-        map["drinking"]= drinking;
-        map["sporty"]= sporty;
-        map["brainy"]= brainy;
-        map["tutvumis"]= tutvumis;
-        map["naughty"]= naughty;
+        map["keys"] = keys;
+        map["drinking"] = drinking;
+        map["sporty"] = sporty;
+        map["brainy"] = brainy;
+        map["tutvumis"] = tutvumis;
+        map["naughty"] = naughty;
         return map;
     }
 }

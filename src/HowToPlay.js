@@ -33,7 +33,7 @@ var HowToPlay = cc.Layer.extend({
         layout.addChild(confirm, 252);
         this.addChild(layout, 251);
 
-        function onMouseUp (event, type) {
+        function onMouseUp(event, type) {
             if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
                 cc.director.runScene(new MainMenuScene())
             }

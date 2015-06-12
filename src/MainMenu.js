@@ -52,17 +52,18 @@ var MainMenu = cc.Layer.extend({
 
         /////////////////////////////
         // 3. add your codes below...
-        function onMouseUp (event, type){
-            if (type == ccui.Widget.TOUCH_ENDED && event.type == 0){
+        function onMouseUp(event, type) {
+            if (type == ccui.Widget.TOUCH_ENDED && event.type == 0) {
                 cc.director.runScene(new GameBoardScene());
-            } else if(type == ccui.Widget.TOUCH_ENDED && event.type == 1) {
+            } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 1) {
                 cc.director.runScene(new HowToPlayScene());
-            } else if(type == ccui.Widget.TOUCH_ENDED && event.type == 2) {
+            } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 2) {
                 cc.director.runScene(new NotHowToPlayScene());
             } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 3) {
                 //TODO: HIGHSCORES
             }
         }
+
         return true;
     }
 });
@@ -75,7 +76,7 @@ var MainMenuScene = cc.Scene.extend({
     }
 });
 
-var _b_getFontName = function(resource) {
+var _b_getFontName = function (resource) {
     if (cc.sys.isNative) {
         return resource.srcs[0];
     } else {

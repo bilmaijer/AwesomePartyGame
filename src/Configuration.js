@@ -25,15 +25,15 @@ var ConfigLayer = cc.Layer.extend({
         //}
         var options = ls.getItem("keys").split(",");
         var innerWidth = sv.getContentSize().width;
-        var innerHeight = sv.getContentSize().height + suvaline.getContentSize().height*options.length;
+        var innerHeight = sv.getContentSize().height + suvaline.getContentSize().height * options.length;
         sv.setInnerContainerSize(cc.size(innerWidth, innerHeight));
         suvaline.x = innerWidth / 2;
         suvaline.y = innerHeight / 2;
         sv.addChild(suvaline);
-        for (var i = 0; i < options.length; i++){
+        for (var i = 0; i < options.length; i++) {
             var tempBox = new ccui.CheckBox();
             tempBox.setTouchEnabled(true);
-            tempBox.loadTextures("res/grey_circle.png","res/grey_boxTick.png","res/grey_boxTick.png","res/grey_circle.png","res/grey_boxTick.png");
+            tempBox.loadTextures("res/grey_circle.png", "res/grey_boxTick.png", "res/grey_boxTick.png", "res/grey_circle.png", "res/grey_boxTick.png");
             tempBox.x = innerWidth / 2 + 30;
             tempBox.y = innerHeight / options.length * i;
             tempBox.string = options[i];
@@ -41,7 +41,7 @@ var ConfigLayer = cc.Layer.extend({
             temp.setString(options[i]);
             temp.x = innerWidth / 2;
             temp.y = innerHeight / options.length * i;
-            temp.setEventListener(onMouseUp,this);
+            temp.setEventListener(onMouseUp, this);
             sv.addChild(temp);
         }
         this.addChild(sv);
@@ -64,8 +64,8 @@ var ConfigLayer = cc.Layer.extend({
             ls.setItem("naughty", naughty);
         }
 
-        function onMouseUp(event, type){
-            if (type == ccui.Widget.TOUCH_ENDED){
+        function onMouseUp(event, type) {
+            if (type == ccui.Widget.TOUCH_ENDED) {
                 //TODO: FIGURE OUT WHAT TO DO HERE...
                 alert("FUCK THIS.")
             }
