@@ -9,6 +9,8 @@ var MainMenu = cc.Layer.extend({
         var howNotToPlayButton = new ccui.Button();
         var playButton = new ccui.Button();
 
+        cc.audioEngine.playMusic(res.s_menu, true);
+
         playButton.loadTextures("res/playButton.png", "res/playButtonPressed.png", " ");
         playButton.type = 0;
         playButton.x = 0;
@@ -68,7 +70,9 @@ var MainMenu = cc.Layer.extend({
 var MainMenuScene = cc.Scene.extend({
     onEnter: function () {
         this._super();
+
         var layer = new MainMenu();
+
         this.addChild(layer);
     }
 });
