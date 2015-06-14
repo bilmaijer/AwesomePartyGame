@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/src/MainMenu.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.312187">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -159,6 +159,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -494,7 +508,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434312847418</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="witout music?2">
+      <created>1434312935815</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1434312935815</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -533,7 +553,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="listener" />
     <MESSAGE value="comment" />
     <MESSAGE value="loadtextures" />
     <MESSAGE value="testin?" />
@@ -558,7 +577,8 @@
     <MESSAGE value="footprints9" />
     <MESSAGE value="footprints10" />
     <MESSAGE value="witout music?" />
-    <option name="LAST_COMMIT_MESSAGE" value="witout music?" />
+    <MESSAGE value="witout music?2" />
+    <option name="LAST_COMMIT_MESSAGE" value="witout music?2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -928,7 +948,7 @@
     <entry file="file://$PROJECT_DIR$/src/MainMenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.312187">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>
