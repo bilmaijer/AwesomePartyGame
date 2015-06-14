@@ -20,6 +20,7 @@ var ConfigLayer = cc.Layer.extend({
         layout.setBackGroundColor(cc.color(222, 214, 185));
         layout.setContentSize(cc.size(400, 400));
 
+        finalThemes = [];
         var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
         var buttons = [];
 
@@ -92,7 +93,6 @@ var ConfigLayer = cc.Layer.extend({
          var suvaline = new cc.LabelTTF();
          //esimese korra funktsioon käivitatakse ainult siis, kui tuvastatakse, et local storage's puudub "keys"
          //praegu on firstTime all alert, mis teatab, kui on esimene kord. Siis saame seda testida native appina.
-         //TODO: UNCOMMENT IF CLAUSE FOR FINAL VERSION. ALSO UNCOMMENT WHEN TESTING ON WINDOWS, ALSO UNCOMMENT IN firstTime().
          //if (ls.getItem("keys") == null){
          firstTime();
          //}
@@ -120,23 +120,23 @@ var ConfigLayer = cc.Layer.extend({
          this.addChild(sv);
          */
 
-        function firstTime() {
-            //TODO: OUR CONTENT GOES HERE
-            var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
-            var drinking = ["Programmers drink!", "Pick three people to share their drinks with anyone who wishes", "Bottoms up!"];
-            var sporty = ["Jump off a cliff!", "Do jumping jacks!", "Do a barrel roll!"];
-            var brainy = ["Think reallllly hard", "Riddle the person to your right", "Ask the impossible question"];
-            var tutvumis = ["Ask the second person on your left three personal questions", "Everyone say their name", "please someone, let me out, i'm stuck in the card printing mach"];
-            var naughty = ["Lick a shoe or smth", "I don't know what you young people do.", "Back in my day..."];
-            //TODO: IF TESTING ON WINDOWS, UNCOMMENT. CHECKS IF IT DOES ACTUALLY SAVE.
-            //alert("Esimene kord!");
-            ls.setItem("keys", keys);
-            ls.setItem("drinking", drinking);
-            ls.setItem("sporty", sporty);
-            ls.setItem("brainy", brainy);
-            ls.setItem("tutvumis", tutvumis);
-            ls.setItem("naughty", naughty);
-        }
+        //function firstTime() {
+        //    //TODO: OUR CONTENT GOES HERE
+        //    var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
+        //    var drinking = ["Programmers drink!", "Pick three people to share their drinks with anyone who wishes", "Bottoms up!"];
+        //    var sporty = ["Jump off a cliff!", "Do jumping jacks!", "Do a barrel roll!"];
+        //    var brainy = ["Think reallllly hard", "Riddle the person to your right", "Ask the impossible question"];
+        //    var tutvumis = ["Ask the second person on your left three personal questions", "Everyone say their name", "please someone, let me out, i'm stuck in the card printing mach"];
+        //    var naughty = ["Lick a shoe or smth", "I don't know what you young people do.", "Back in my day..."];
+        //    //TODO: IF TESTING ON WINDOWS, UNCOMMENT. CHECKS IF IT DOES ACTUALLY SAVE.
+        //    //alert("Esimene kord!");
+        //    ls.setItem("keys", keys);
+        //    ls.setItem("drinking", drinking);
+        //    ls.setItem("sporty", sporty);
+        //    ls.setItem("brainy", brainy);
+        //    ls.setItem("tutvumis", tutvumis);
+        //    ls.setItem("naughty", naughty);
+        //}
         return true;
     }
 });

@@ -21,12 +21,8 @@ function createTable(s) {
 
     var content = [];
 
-    for (var l = 0; l < 5; l++) {
-        content.push("res/drinking");
-        content.push("res/sporty");
-        content.push("res/brainy");
-        content.push("res/tutvumis");
-        content.push("res/naughty");
+    for (var l = 0; l < finalThemes.length; l++) {
+        content.push("res/"+finalThemes[l]);
     }
     //var cards = [];
     //for (var k = 0; k < 5; k++) {
@@ -44,6 +40,7 @@ function createTable(s) {
     s.labelCoin.setColor(cc.color(245, 245, 245));//black color
     s.labelCoin.setPosition(cc.p(70, cc.winSize.height - 20));
     s.addChild(s.labelCoin);
+
     function onMouseUp(event, type) {
         if (type == ccui.Widget.TOUCH_ENDED && !s.busy) {
             var uus = event.name.split(" ");
