@@ -9,7 +9,7 @@ var MainMenu = cc.Layer.extend({
         var howNotToPlayButton = new ccui.Button();
         var playButton = new ccui.Button();
 
-        //cc.audioEngine.playMusic(res.s_menu, true);
+        cc.audioEngine.playMusic(res.s_menu, true);
 
         playButton.loadTextures("res/playButton.png", "res/playButtonPressed.png", " ");
         playButton.type = 0;
