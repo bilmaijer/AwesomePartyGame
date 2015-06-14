@@ -100,6 +100,7 @@ function createTable(s) {
     // L�hedal asuvate ruutude kontroll ja ikooni muutus
 
     function refresh(x, y, temp) {
+
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
             if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
                 if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
@@ -135,26 +136,38 @@ function createTable(s) {
             temp.switch = false;
         }*/
         if (asukoht[0] - x == 0 && asukoht[1] - y == 0) {
+            console.log(temp.x);
             if (which % 2 == 0) {
                 temp.loadTextures("res/footprintR.png", "res/footprintR.png", " ");
+                var a = 10;
             }
             else{
                 temp.loadTextures("res/footprintL.png", "res/footprintL.png", " ");
+                var a = -10;
             }
+
             which++;
             if (where == "right") {
                 temp.attr({
-                    rotation: 90
+                    rotation: 90,
+                    y: temp.y -a
                 });
             }
             else if (where == "left"){
                 temp.attr({
-                    rotation: 270
+                    rotation: 270,
+                    y: temp.y + a
                 });
             }
             else if (where == "down"){
                 temp.attr({
-                    rotation: 180
+                    rotation: 180,
+                    x : temp.x -a
+                });
+            }
+            else{
+                temp.attr({
+                    x : temp.x +a
                 });
             }
             temp.setScale(0.07, 0.07);

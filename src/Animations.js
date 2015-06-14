@@ -61,7 +61,6 @@ function openCard(temp, s, card, allPossibleTasks) {
     contentText.setScale(0.4);
     contentText.ignoreContentAdaptWithSize(false);
     contentText.setFontName(_b_getFontName(res.robota));
-    console.log(contentText);
     allSpecificTasks.splice(newTaskPosition, 1);
     allPossibleTasks[card] = allSpecificTasks;
     var next = new ccui.Button();
