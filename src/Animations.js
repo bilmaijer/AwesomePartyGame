@@ -6,6 +6,7 @@ var cumulative = 5;
 function openCard(temp, s, card, allPossibleTasks) {
     function onMouseUp(event, type) {
         s.busy = false;
+        cc.audioEngine.playEffect(res.s_flip);
         if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
             cumulative += 5;
             score += cumulative;

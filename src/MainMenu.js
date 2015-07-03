@@ -32,17 +32,18 @@ var MainMenu = cc.Layer.extend({
         howNotToPlayButton.setScale(0.6);
         howNotToPlayButton.addTouchEventListener(onMouseUp, this);
 
-        //var highscoresButton = new ccui.Button();
-        //highscoresButton.loadTextures("res/highscores.png", "res/highscoresPressed.png", " ");
-        //highscoresButton.type = 3;
-        //highscoresButton.x = 0;
-        //highscoresButton.y = -98;
-        //highscoresButton.addTouchEventListener(onMouseUp, this);
+        var shutDown = new ccui.Button();
+        shutDown.loadTextures("res/temp.png", "res/temp2.png", " ");
+        shutDown.type = 3;
+        shutDown.x = -200;
+        shutDown.y = -100;
+        shutDown.setScale(0.1)
+        shutDown.addTouchEventListener(onMouseUp, this);
 
         menu.addChild(playButton);
         menu.addChild(howToPlayButton);
         menu.addChild(howNotToPlayButton);
-        //menu.addChild(highscoresButton);
+        menu.addChild(shutDown);
 
         menu.x = size.width / 2;
         menu.y = size.height / 2;
@@ -59,10 +60,9 @@ var MainMenu = cc.Layer.extend({
             } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 2) {
                 cc.director.runScene(new NotHowToPlayScene());
             } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 3) {
-                //TODO: HIGHSCORES
+                cc.director.end()
             }
         }
-
         return true;
     }
 });

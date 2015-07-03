@@ -11,6 +11,7 @@ var GameBoardLayer = cc.Layer.extend({
 });
 var GameBoardScene = cc.Scene.extend({
     onEnter: function () {
+        cc.audioEngine.setMusicVolume(0.1);
         for (var j = 0; j<finalThemes.length;j++){
             console.log(finalThemes[j])
         }
