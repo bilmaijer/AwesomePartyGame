@@ -76,6 +76,7 @@ function openCard(temp, s, card, allPossibleTasks) {
     }
     contentText.setColor(cc.color(0,0,0));
     contentText.setContentSize(cc.size(800,900));
+
     contentText.setScale(0.4);
     contentText.ignoreContentAdaptWithSize(false);
     contentText.setFontName(_b_getFontName(res.robota));
