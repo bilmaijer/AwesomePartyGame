@@ -1,6 +1,3 @@
-/**
- * Created by Spikey on 16.05.2015.
- */
 var score = 0;
 var win = 0;
 
@@ -12,30 +9,17 @@ function createTable(s) {
     win = 0;
     s.busy = false;
 
-    // allPossibleTasks on hashMap, kus võtmeteks on kategooriad ja väärtusteks arrayList, kus on kõik võimalikud taskid.
-    // SEDA HASHMAPI KASUTADA EVENTLISTENERIS, MITTE LOCAL STORAGE'T.
     var allPossibleTasks = createAll();
-
-
-    //buttonite tegemise asi randomiga
-
     var content = [];
 
     for (var l = 0; l < finalThemes.length; l++) {
-        content.push("res/"+finalThemes[l]);
+        content.push("res/" + finalThemes[l]);
     }
-    //var cards = [];
-    //for (var k = 0; k < 5; k++) {
-    //    cards.push("res/card1.png");
-    //    cards.push("res/card2.png");
-    //    cards.push("res/card3.png");
-    //}
 
     var map = [];
-
     var where;
     var which = 0;
-    //score label
+
     s.labelCoin = new cc.LabelTTF("Score: " + score, "Helvetica", 20);
     s.labelCoin.setColor(cc.color(245, 245, 245));//black color
     s.labelCoin.setPosition(cc.p(70, cc.winSize.height - 20));
@@ -51,16 +35,16 @@ function createTable(s) {
                 openCard(array[0], s, array[0].type.slice(4), allPossibleTasks);
                 if (asukoht[0] != null) {
                     kasutatud.push(asukoht[0].toString() + " " + asukoht[1].toString());
-                    if (asukoht[0]>uus[0]){
+                    if (asukoht[0] > uus[0]) {
                         where = "left";
                     }
-                    else if (asukoht[0]<uus[0]){
+                    else if (asukoht[0] < uus[0]) {
                         where = "right";
                     }
-                    else if (asukoht[1]>uus[1]){
+                    else if (asukoht[1] > uus[1]) {
                         where = "down";
                     }
-                    else{
+                    else {
                         where = "up";
                     }
                     asukoht = uus;
@@ -70,10 +54,7 @@ function createTable(s) {
         }
     }
 
-    //buttonite tegemise asi randomiga
-
     var asukoht = [2, -1];
-    //var empty = new ccui.Widget();
     win = 0;
     for (i = 1; i < 6; i++) {
         for (j = 1; j < 6; j++) {
@@ -90,16 +71,7 @@ function createTable(s) {
             refresh(x, y, temp);
         }
     }
-
-    //var hero = new cc.Sprite();
-    //hero.x = cc.winSize.width / 2;
-    //hero.y = cc.winSize.height / 12;
-    //s.addChild(hero, 250);
-
-    // L�hedal asuvate ruutude kontroll ja ikooni muutus
-
     function refresh(x, y, temp) {
-
         if (kasutatud.indexOf(x.toString() + " " + y.toString()) == -1) {
             if (asukoht[0] - x == 0 || asukoht[0] - x == 1 || asukoht[0] - x == -1) {
                 if (asukoht[1] - y == 0 || asukoht[1] - y == 1 || asukoht[1] - y == -1) {
@@ -128,44 +100,38 @@ function createTable(s) {
                 temp.switch = false;
             }
         }
-        /*else {
-            temp.loadTextures("res/footprintR.png", "res/footprintR.png", " ");
-
-            temp.setScale(0.07, 0.07);
-            temp.switch = false;
-        }*/
         if (asukoht[0] - x == 0 && asukoht[1] - y == 0) {
             if (which % 2 == 0) {
                 temp.loadTextures("res/footprintR.png", "res/footprintR.png", " ");
-                var a = 10;
+                a = 10;
             }
-            else{
+            else {
                 temp.loadTextures("res/footprintL.png", "res/footprintL.png", " ");
-                var a = -10;
+                a = -10;
             }
 
             which++;
             if (where == "right") {
                 temp.attr({
                     rotation: 90,
-                    y: temp.y -a
+                    y: temp.y - a
                 });
             }
-            else if (where == "left"){
+            else if (where == "left") {
                 temp.attr({
                     rotation: 270,
                     y: temp.y + a
                 });
             }
-            else if (where == "down"){
+            else if (where == "down") {
                 temp.attr({
                     rotation: 180,
-                    x : temp.x -a
+                    x: temp.x - a
                 });
             }
-            else{
+            else {
                 temp.attr({
-                    x : temp.x +a
+                    x: temp.x + a
                 });
             }
             temp.setScale(0.07, 0.07);
@@ -184,17 +150,7 @@ function createTable(s) {
         }
     }
 
-    //function createMap() {
-    //    var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
-    //    var map = {};
-    //    var toLoop = ls.getItem("keys").split(",");
-    //    for (var i = 0; i < toLoop.length; i++) {
-    //        map[toLoop[i]] = ls.getItem(toLoop[i]).split(",");
-    //    }
-    //    return map;
-    //}
     function createAll() {
-        //TODO: OUR CONTENT GOES HERE
         var map = {};
         var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty", "discussions", "questions", "rules"];
         var drinking = [
@@ -228,7 +184,7 @@ function createTable(s) {
             "Pass the food around - Go around the group, each one naming a food item with eggs, flour and milk/water in it. You may not repeat",
             "Letter dodge - Gamemaster thinks of a word. The person on his right starts by saying one to three consecutive letters from the alphabet that are not part of this word. The next goes on as quick as he can",
             "The politician - the Gamemaster picks a person. This person must now give a 60 second speech without repeating a single word. Preparation time: 3 minutes"
-            ];
+        ];
         var tutvumis = [
             "Two truths and a lie - One by one each party member reveals two interesting facts about himself and adds one lie in the mix. The others try to guess the lie",
             "Hi how are you! - Everyone says their name. Then each person in turn tries to correctly place all names. If someone fails, start over. Game ends, when everyone has memorized all names",
@@ -280,7 +236,6 @@ function createTable(s) {
             "What is the hardest part of being an astronaut? Why?"
         ];
         map["keys"] = keys;
-        //alert("Esimene kord!");
         map["discussions"] = discussions;
         map["questions"] = questions;
         map["rules"] = rules;

@@ -1,13 +1,8 @@
-/**
- * Created by Spikey on 9.06.2015.
- */
 var finalThemes;
-
 var ConfigLayer = cc.Layer.extend({
     sprite: null,
     ctor: function () {
         this._super();
-
         var layout = new ccui.Layout();
         layout.attr({
             anchorX: 0.5,
@@ -21,21 +16,21 @@ var ConfigLayer = cc.Layer.extend({
         layout.setContentSize(cc.size(400, 400));
 
         finalThemes = [];
-        var keys = [ "sporty", "tutvumis", "naughty",  "questions","rules", "discussions", "brainy","drinking"];
+        var keys = ["sporty", "tutvumis", "naughty", "questions", "rules", "discussions", "brainy", "drinking"];
         var buttons = [];
 
         for (var p = 0; p < keys.length; p++) {
             var temp = new ccui.Button();
-            temp.a = "res/"+keys[p]+"_cat.png";
-            temp.b = "res/"+keys[p]+"_selected.png";
+            temp.a = "res/" + keys[p] + "_cat.png";
+            temp.b = "res/" + keys[p] + "_selected.png";
             temp.loadTextures(temp.a, temp.b, " ");
             temp.addTouchEventListener(onMouseUp, this);
             temp.setScale(0.5);
             if (p < 4) {
-                temp.setPosition(100, 420 - ((p+1) * 70));
+                temp.setPosition(100, 420 - ((p + 1) * 70));
             }
             else {
-                temp.setPosition(300, 420 - (((p+1) - 4) * 70));
+                temp.setPosition(300, 420 - (((p + 1) - 4) * 70));
             }
             temp.didIt = true;
             temp.key = keys[p];
@@ -43,7 +38,6 @@ var ConfigLayer = cc.Layer.extend({
             layout.addChild(temp, 252);
         }
 
-        //// Confirm button
         var confirm = new ccui.Button();
         confirm.loadTextures("res/check.png", "res/check.png", " ");
         confirm.setScale(0.2);
@@ -62,7 +56,7 @@ var ConfigLayer = cc.Layer.extend({
         layout.addChild(help, 252);
         this.addChild(layout, 251);
 
-        function onHelp(event, type){
+        function onHelp(event, type) {
             if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
                 fromWhere = 1;
                 cc.director.runScene(new HelpScene());
@@ -72,15 +66,15 @@ var ConfigLayer = cc.Layer.extend({
         function onConfirm(event, type) {
             if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
                 finalThemes = [];
-                for (var r = 0; r < buttons.length; r++){
-                    if (buttons[r].didIt == false){
+                for (var r = 0; r < buttons.length; r++) {
+                    if (buttons[r].didIt == false) {
                         finalThemes.push(buttons[r].key)
                     }
                 }
-                if (finalThemes.length>2) {
+                if (finalThemes.length > 2) {
                     cc.director.runScene(new GameBoardScene())
                 }
-                else{
+                else {
                     var warning = new ccui.Text;
                     warning.attr({
                         string: "Minimum three themes!",
@@ -113,6 +107,7 @@ var ConfigLayer = cc.Layer.extend({
                 }
             }
         }
+
         return true;
     }
 });

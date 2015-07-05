@@ -19,7 +19,6 @@
         "src/Configuration.js",
         "src/EndScene.js",
         "src/HowToPlay.js",
-        "src/NotHowToPlay.js",
         "src/HelpScene.js"
     ]
 }

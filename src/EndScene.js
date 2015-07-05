@@ -22,7 +22,7 @@ var TheEnd = cc.Layer.extend({
         PlayAgain.addTouchEventListener(onMouseUp, this);
         this.addChild(PlayAgain);
         function onMouseUp(event, type) {
-            if (type == ccui.Widget.TOUCH_ENDED) {
+            if (type == ccui.Widget.TOUCH_ENDED && event == event) {
                 cc.director.runScene(new MainMenuScene());
             }
         }
@@ -30,9 +30,6 @@ var TheEnd = cc.Layer.extend({
         return true;
     }
 });
-/**
- * Created by Spikey on 12.06.2015.
- */
 
 var EndScene = cc.Scene.extend({
     onEnter: function () {

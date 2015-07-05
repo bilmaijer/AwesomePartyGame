@@ -10,7 +10,6 @@ var MainMenu = cc.Layer.extend({
         var CategoriesButton = new ccui.Button();
         var playButton = new ccui.Button();
 
-        //cc.audioEngine.playMusic(res.s_menu, true);
         var logo = cc.Sprite.create("res/blankbox_logo.png");
         playButton.loadTextures("res/playButton.png", "res/playButtonPressed.png", " ");
         playButton.type = 0;
@@ -33,42 +32,31 @@ var MainMenu = cc.Layer.extend({
         CategoriesButton.setScale(0.6);
         CategoriesButton.addTouchEventListener(onMouseUp, this);
 
-        /*var shutDown = new ccui.Button();
-        shutDown.loadTextures("res/temp.png", "res/temp2.png", " ");
-        shutDown.type = 3;
-        shutDown.x = -200;
-        shutDown.y = -100;
-        shutDown.setScale(0.1);
-        shutDown.addTouchEventListener(onMouseUp, this);*/
-
         menu.addChild(playButton);
         menu.addChild(howToPlayButton);
         menu.addChild(CategoriesButton);
-        //menu.addChild(shutDown);
 
         menu.x = size.width / 2;
-        menu.y = size.height / 2-50;
+        menu.y = size.height / 2 - 50;
         menu.setContentSize(size);
         this.addChild(menu, 1);
 
-        //var logoTargetSize = Size(100,100);
-        console.log(logo.width);
-        logo.x= size.width / 2;
-        logo.y = size.height / 1.2-40;
+        logo.x = size.width / 2;
+        logo.y = size.height / 1.2 - 40;
         logo.setScale(0.06, 0.06);
-        this.addChild(logo,2);
-        /////////////////////////////
-        // 3. add your codes below...
-        function onMouseUp (event, type){
-            if (type == ccui.Widget.TOUCH_ENDED && event.type == 0){
+        this.addChild(logo, 2);
+
+        function onMouseUp(event, type) {
+            if (type == ccui.Widget.TOUCH_ENDED && event.type == 0) {
                 cc.director.runScene(new ConfigScene());
-            } else if(type == ccui.Widget.TOUCH_ENDED && event.type == 1) {
+            } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 1) {
                 cc.director.runScene(new HowToPlayScene());
             } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 2) {
                 fromWhere = 0;
                 cc.director.runScene(new HelpScene());
             }
         }
+
         return true;
     }
 });

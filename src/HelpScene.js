@@ -1,9 +1,3 @@
-/**
- * Created by Spikey on 6.07.2015.
- */
-/**
- * Created by Spikey on 12.06.2015.
- */
 var Help = cc.Layer.extend({
     sprite: null,
     ctor: function () {
@@ -23,8 +17,6 @@ var Help = cc.Layer.extend({
 
         var contentText = new ccui.Text;
         var widgetSize = layout.getContentSize();
-        /*var allSpecificTasks = allPossibleTasks[card];
-         var newTaskPosition = Math.floor((Math.random() * allSpecificTasks.length - 1) + 1);*/
         contentText.attr({
             string: "Sporty\n" +
             "The Sporty category has activities that involve activity and movement. Good for the outside, but can easily be done indoors as well.\n" +
@@ -41,22 +33,21 @@ var Help = cc.Layer.extend({
             "\nBrainy" +
             "\nBrainy tasks need creativity and fast thinking. Good for a quick IQ test." +
             "\nDrinking" +
-            "\nDrinking games are... well, for drinking. A nice party-starter",
+            "\nDrinking games are... well, for drinking. A nice party-starter.",
             fontName: "Marker Felt",
             fontSize: 20,
             anchorX: 0.5,
             anchorY: 0,
-            x: widgetSize.width/2
+            x: widgetSize.width / 2
         });
 
-        contentText.setColor(cc.color(0,0,0));
-        contentText.setContentSize(cc.size(800,800));
+        contentText.setColor(cc.color(0, 0, 0));
+        contentText.setContentSize(cc.size(800, 800));
         contentText.setScale(0.47);
         contentText.ignoreContentAdaptWithSize(false);
         contentText.setFontName(_b_getFontName(res.robota));
         layout.addChild(contentText, 252);
 
-        //// Confirm button
         var confirm = new ccui.Button();
         confirm.loadTextures("res/check.png", "res/check.png", " ");
         confirm.setScale(0.2);
@@ -72,11 +63,12 @@ var Help = cc.Layer.extend({
                 if (fromWhere == 0) {
                     cc.director.runScene(new MainMenuScene())
                 }
-                else if (fromWhere == 1){
+                else if (fromWhere == 1) {
                     cc.director.runScene(new ConfigScene())
                 }
             }
         }
+
         return true;
     }
 });
