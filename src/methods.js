@@ -196,7 +196,7 @@ function createTable(s) {
     function createAll() {
         //TODO: OUR CONTENT GOES HERE
         var map = {};
-        var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
+        var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty", "discussions", "questions", "rules"];
         var drinking = [
             "Make up a drinking rule. e.g. Who stands up for whatever reason, must drink",
             "Pick three people to share their drinks with anyone who wishes",

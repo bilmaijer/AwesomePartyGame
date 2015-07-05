@@ -46,14 +46,14 @@ var MainMenu = cc.Layer.extend({
         //menu.addChild(shutDown);
 
         menu.x = size.width / 2;
-        menu.y = size.height / 2;
+        menu.y = size.height / 2-50;
         menu.setContentSize(size);
         this.addChild(menu, 1);
 
         //var logoTargetSize = Size(100,100);
         console.log(logo.width);
         logo.x= size.width / 2;
-        logo.y = size.height / 1.2;
+        logo.y = size.height / 1.2-40;
         logo.setScale(0.06, 0.06);
         this.addChild(logo,2);
         /////////////////////////////
