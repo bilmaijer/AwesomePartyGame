@@ -55,9 +55,6 @@ var Help = cc.Layer.extend({
         contentText.ignoreContentAdaptWithSize(false);
         contentText.setFontName(_b_getFontName(res.robota));
         layout.addChild(contentText, 252);
-        /*var instruction = new cc.Sprite("res/HowTo.png");
-         instruction.setPosition(200, 200);
-         layout.addChild(instruction);*/
 
         //// Confirm button
         var confirm = new ccui.Button();
@@ -80,7 +77,6 @@ var Help = cc.Layer.extend({
                 }
             }
         }
-
         return true;
     }
 });

@@ -43,7 +43,7 @@ var MainMenu = cc.Layer.extend({
 
         menu.addChild(playButton);
         menu.addChild(howToPlayButton);
-        //menu.addChild(endGameButton);
+        menu.addChild(endGameButton);
         //menu.addChild(shutDown);
 
         menu.x = size.width / 2;
@@ -63,10 +63,10 @@ var MainMenu = cc.Layer.extend({
             if (type == ccui.Widget.TOUCH_ENDED && event.type == 0){
                 cc.director.runScene(new ConfigScene());
             } else if(type == ccui.Widget.TOUCH_ENDED && event.type == 1) {
-                fromWhere = 0;
                 cc.director.runScene(new HowToPlayScene());
             } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 2) {
-                cc.director.end();
+                fromWhere = 0;
+                cc.director.runScene(new HelpScene());
             }
         }
         return true;

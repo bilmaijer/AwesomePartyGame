@@ -65,7 +65,7 @@ var ConfigLayer = cc.Layer.extend({
         function onHelp(event, type){
             if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
                 fromWhere = 1;
-                cc.director.runScene(new HowToPlayScene());
+                cc.director.runScene(new HelpScene());
             }
         }
 
