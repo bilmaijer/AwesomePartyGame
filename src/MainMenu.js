@@ -6,11 +6,11 @@ var MainMenu = cc.Layer.extend({
         var size = cc.winSize;
         var howToPlayButton = new ccui.Button();
         var menu = new ccui.Layout();
-        var howNotToPlayButton = new ccui.Button();
+        var endGameButton = new ccui.Button();
         var playButton = new ccui.Button();
 
         //cc.audioEngine.playMusic(res.s_menu, true);
-
+        var logo = cc.Sprite.create("res/blankbox_logo.png");
         playButton.loadTextures("res/playButton.png", "res/playButtonPressed.png", " ");
         playButton.type = 0;
         playButton.x = 0;
@@ -25,31 +25,37 @@ var MainMenu = cc.Layer.extend({
         howToPlayButton.setScale(0.6);
         howToPlayButton.addTouchEventListener(onMouseUp, this);
 
-        howNotToPlayButton.loadTextures("res/howNotToPlay.png", "res/howNotToPlayPressed.png", " ");
-        howNotToPlayButton.type = 2;
-        howNotToPlayButton.x = 0;
-        howNotToPlayButton.y = -49;
-        howNotToPlayButton.setScale(0.6);
-        howNotToPlayButton.addTouchEventListener(onMouseUp, this);
+        endGameButton.loadTextures("res/end_button.png", "res/end_button_pressed.png", " ");
+        endGameButton.type = 2;
+        endGameButton.x = 0;
+        endGameButton.y = -49;
+        endGameButton.setScale(0.6);
+        endGameButton.addTouchEventListener(onMouseUp, this);
 
-        var shutDown = new ccui.Button();
+        /*var shutDown = new ccui.Button();
         shutDown.loadTextures("res/temp.png", "res/temp2.png", " ");
         shutDown.type = 3;
         shutDown.x = -200;
         shutDown.y = -100;
         shutDown.setScale(0.1);
-        shutDown.addTouchEventListener(onMouseUp, this);
+        shutDown.addTouchEventListener(onMouseUp, this);*/
 
         menu.addChild(playButton);
         menu.addChild(howToPlayButton);
-        menu.addChild(howNotToPlayButton);
-        menu.addChild(shutDown);
+        menu.addChild(endGameButton);
+        //menu.addChild(shutDown);
 
         menu.x = size.width / 2;
         menu.y = size.height / 2;
         menu.setContentSize(size);
         this.addChild(menu, 1);
 
+        //var logoTargetSize = Size(100,100);
+        console.log(logo.width);
+        logo.x= size.width / 2;
+        logo.y = size.height / 1.2;
+        logo.setScale(0.06, 0.06);
+        this.addChild(logo,2);
         /////////////////////////////
         // 3. add your codes below...
         function onMouseUp (event, type){
@@ -58,9 +64,7 @@ var MainMenu = cc.Layer.extend({
             } else if(type == ccui.Widget.TOUCH_ENDED && event.type == 1) {
                 cc.director.runScene(new HowToPlayScene());
             } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 2) {
-                cc.director.runScene(new NotHowToPlayScene());
-            } else if (type == ccui.Widget.TOUCH_ENDED && event.type == 3) {
-                cc.director.end()
+                cc.director.end();
             }
         }
         return true;
