@@ -272,7 +272,7 @@ function createTable(s) {
         var discussions = [
             "What is the main reason you use/don't use social networks? Why or why not?",
             "You have been caught driving on public transport without a ticket. How do you try to avoid getting ticketed? ",
-            "What deal would you make with the devil to sell your soul?",
+            "What would you willing to trade for anything in the world?",
             "You have a good, albeit lonely friend that has never been on a date. How would you help him?",
             "What would you do with a million dollars?",
             "Do you use mobile apps in a constructive way or just to waste time? Explain and bring examples.",
