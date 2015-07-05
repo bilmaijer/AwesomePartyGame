@@ -6,7 +6,6 @@ var cumulative = 5;
 function openCard(temp, s, card, allPossibleTasks) {
     function onMouseUp(event, type) {
         s.busy = false;
-        cc.audioEngine.playEffect(res.s_flip);
         if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
             cumulative += 5;
             score += cumulative;
@@ -56,7 +55,16 @@ function openCard(temp, s, card, allPossibleTasks) {
         anchorY: 0,
         x: widgetSize.width/2
     });
-
+    alert(contentText.string.length);
+    if (contentText.string.length < 100 && contentText.string.length > 50){
+        contentText.fontSize = 60;
+    } else if (contentText.string.length < 200){
+        contentText.fontSize = 50;
+    } else if (contentText.string.length < 250){
+        contentText.fontSize = 40;
+    } else if (contentText.string.length < 300){
+        contentText.fontSize = 40;
+    }
     contentText.setColor(cc.color(0,0,0));
     contentText.setContentSize(cc.size(800,900));
     contentText.setScale(0.4);
