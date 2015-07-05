@@ -63,7 +63,6 @@ function createTable(s) {
                     else{
                         where = "up";
                     }
-                    console.log(where);
                     asukoht = uus;
                     fullRefresh();
                 }
@@ -136,7 +135,6 @@ function createTable(s) {
             temp.switch = false;
         }*/
         if (asukoht[0] - x == 0 && asukoht[1] - y == 0) {
-            console.log(temp.x);
             if (which % 2 == 0) {
                 temp.loadTextures("res/footprintR.png", "res/footprintR.png", " ");
                 var a = 10;
