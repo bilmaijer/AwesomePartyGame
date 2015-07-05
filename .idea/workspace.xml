@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3f6fe52-c550-4fd3-bcef-0bfeece7a6fe" name="Default" comment="delete unnecessary png">
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\a2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\a3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\brainy1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\card1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\card2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\card3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\hero2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\highscores.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\highscoresPressed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\howNotToPlay.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\howNotToPlayPressed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\naughty1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\sporty1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\temp.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\temp2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\test.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\test2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Anna\projects\MyGame\res\tutvumis1.png" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Anna\projects\MyGame\res\drinking1.png" afterPath="$PROJECT_DIR$/res/help_button.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Configuration.js" afterPath="$PROJECT_DIR$/src/Configuration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/methods.js" afterPath="$PROJECT_DIR$/src/methods.js" />
+    <list default="true" id="f3f6fe52-c550-4fd3-bcef-0bfeece7a6fe" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainMenu.js" afterPath="$PROJECT_DIR$/src/MainMenu.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyGame.iws" />
@@ -44,94 +24,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="methods.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/methods.js">
+      <file leaf-file-name="MainMenu.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MainMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.36096257">
+              <caret line="28" column="102" selection-start-line="28" selection-start-column="102" selection-end-line="28" selection-end-column="102" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Animations.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Animations.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Configuration.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Configuration.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3315508">
-              <caret line="91" column="81" selection-start-line="91" selection-start-column="81" selection-end-line="91" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HowToPlay.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HowToPlay.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frameworks/runtime-src/proj.win8.1-universal/Debug/MyGame.Windows/AppX/Assets/Resources/src/MainMenu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CCArmatureDataManager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/extensions/cocostudio/armature/utils/CCArmatureDataManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="192" column="56" selection-start-line="192" selection-start-column="56" selection-end-line="192" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelpScene.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HelpScene.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="3" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tutvumis.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/tutvumis.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sporty.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/sporty.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="brainy.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/brainy.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -157,16 +56,17 @@
         <option value="$PROJECT_DIR$/src/EndScene.js" />
         <option value="$PROJECT_DIR$/src/resource.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/MainMenu.js" />
         <option value="$PROJECT_DIR$/src/methods.js" />
         <option value="$PROJECT_DIR$/src/Animations.js" />
         <option value="$PROJECT_DIR$/project.json" />
         <option value="$PROJECT_DIR$/src/HowToPlay.js" />
         <option value="$PROJECT_DIR$/src/methods.js" />
-        <option value="$PROJECT_DIR$/src/MainMenu.js" />
         <option value="$PROJECT_DIR$/src/HelpScene.js" />
         <option value="$PROJECT_DIR$/src/HowToPlay.js" />
         <option value="$PROJECT_DIR$/src/Configuration.js" />
+        <option value="$PROJECT_DIR$/frameworks/runtime-src/proj.win8.1-universal/Debug/MyGame.Windows/AppX/Assets/Resources/src/MainMenu.js" />
+        <option value="$PROJECT_DIR$/src/MainMenu.js" />
+        <option value="$PROJECT_DIR$/src/MainMenu.js" />
       </list>
     </option>
   </component>
@@ -233,7 +133,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -604,7 +504,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436130173861</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="delete unnecessary png">
+      <created>1436134804450</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1436134804450</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -697,13 +603,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resource.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -913,6 +812,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -927,21 +827,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/naughty.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/tutvumis.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/sporty.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/brainy.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -980,28 +865,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project.json" />
-    <entry file="file://$PROJECT_DIR$/frameworks/runtime-src/proj.win8.1-universal/Debug/MyGame.Windows/AppX/Assets/Resources/src/MainMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Animations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-          <caret line="192" column="56" selection-start-line="192" selection-start-column="56" selection-end-line="192" selection-end-column="56" />
-          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1030,18 +897,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HelpScene.js">
+    <entry file="file://$PROJECT_DIR$/src/Configuration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="81" selection-start-line="91" selection-start-column="81" selection-end-line="91" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frameworks/runtime-src/proj.win8.1-universal/Debug/MyGame.Windows/AppX/Assets/Resources/src/MainMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.38502672">
+          <caret line="25" column="93" selection-start-line="25" selection-start-column="93" selection-end-line="25" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/extensions/cocostudio/armature/utils/CCArmatureDataManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="192" column="56" selection-start-line="192" selection-start-column="56" selection-end-line="192" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HelpScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2486631">
           <caret line="89" column="3" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Configuration.js">
+    <entry file="file://$PROJECT_DIR$/res/tutvumis.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/sporty.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/brainy.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainMenu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3315508">
-          <caret line="91" column="81" selection-start-line="91" selection-start-column="81" selection-end-line="91" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.36096257">
+          <caret line="28" column="102" selection-start-line="28" selection-start-column="102" selection-end-line="28" selection-end-column="102" />
           <folding />
         </state>
       </provider>

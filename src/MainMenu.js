@@ -7,7 +7,7 @@ var MainMenu = cc.Layer.extend({
         var size = cc.winSize;
         var howToPlayButton = new ccui.Button();
         var menu = new ccui.Layout();
-        var endGameButton = new ccui.Button();
+        var CategoriesButton = new ccui.Button();
         var playButton = new ccui.Button();
 
         //cc.audioEngine.playMusic(res.s_menu, true);
@@ -26,12 +26,12 @@ var MainMenu = cc.Layer.extend({
         howToPlayButton.setScale(0.6);
         howToPlayButton.addTouchEventListener(onMouseUp, this);
 
-        endGameButton.loadTextures("res/end_button.png", "res/end_button_pressed.png", " ");
-        endGameButton.type = 2;
-        endGameButton.x = 0;
-        endGameButton.y = -49;
-        endGameButton.setScale(0.6);
-        endGameButton.addTouchEventListener(onMouseUp, this);
+        CategoriesButton.loadTextures("res/categories_button.png", "res/categories_pressed.png", " ");
+        CategoriesButton.type = 2;
+        CategoriesButton.x = 0;
+        CategoriesButton.y = -49;
+        CategoriesButton.setScale(0.6);
+        CategoriesButton.addTouchEventListener(onMouseUp, this);
 
         /*var shutDown = new ccui.Button();
         shutDown.loadTextures("res/temp.png", "res/temp2.png", " ");
@@ -43,7 +43,7 @@ var MainMenu = cc.Layer.extend({
 
         menu.addChild(playButton);
         menu.addChild(howToPlayButton);
-        menu.addChild(endGameButton);
+        menu.addChild(CategoriesButton);
         //menu.addChild(shutDown);
 
         menu.x = size.width / 2;
