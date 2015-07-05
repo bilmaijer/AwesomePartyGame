@@ -37,7 +37,7 @@ var MainMenu = cc.Layer.extend({
         shutDown.type = 3;
         shutDown.x = -200;
         shutDown.y = -100;
-        shutDown.setScale(0.1)
+        shutDown.setScale(0.1);
         shutDown.addTouchEventListener(onMouseUp, this);
 
         menu.addChild(playButton);

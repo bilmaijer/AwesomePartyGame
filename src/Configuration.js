@@ -21,7 +21,7 @@ var ConfigLayer = cc.Layer.extend({
         layout.setContentSize(cc.size(400, 400));
 
         finalThemes = [];
-        var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty"];
+        var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty", "rules", "questions", "discussions"];
         var buttons = [];
 
         for (var p = 0; p < keys.length; p++) {

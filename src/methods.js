@@ -206,28 +206,29 @@ function createTable(s) {
             "Everyone (who's alive) drinks. Repeat as many times as you deem reasonable",
             "Waterfall - On start everyone starts drinking and you may stop when the person to your left has stopped. Gamemaster will stop drinking first",
             "Never have I ever - You say something that you have never done. Each person who has takes a sip of his drink. Repeat until each person has had his turn",
-            "We will order all of it - Gamemaster chooses one category and you start naming items that belongs in that category. Game over when someone can't think of anything new",
+            "We will order all of it - Gamemaster chooses one category and you start naming items that belong in that category. Game over when someone can't think of anything new",
             "Cavemen to the rescue - Every man must drink",
-            "Beauty pagent - Any woman is beautiful and there for they must drink"];
+            "Beauty pagent - Any woman is beautiful and hence all women must drink"];
         var sporty = [
             "Ready, set, go! - First one to complete the following exercises, wins. 2x jumping jacks, sit up, push up, sit up, push up and a somersault",
             "Repetition is the key - See who can do most push ups",
             "Flamingo forest - Everyone stands on one leg with no support. Lets see who can last the longest",
             "Follow the leader - The Gamemaster shows one physical exercise that the others must do. Then the others do the same in a clockwise order until everyone has had a go",
-            "",
-            "",
-            "",
-            ""];
+            "Football - Take a piece of paper and make a ball out of it. Now take two items and set up a goal. The Gamemaster is the goalie. Score 3 points!",
+            "Weird Potato - Wrap up a piece of paper to make a ball. Stand in a circle. Pass on this ball using any body part except your arms. The circle starts and ends with the Gamemaster.",
+            "Number game - Form teams of two. The Gamemaster will give each team a number that they have to form with their bodies.",
+            "Workplace pantomime - Each person has to explain a job to other players without words in any form. Guess at least half correctly!"
+        ];
 
         var brainy = [
             "Do the wordchain - Starting from the Gamemaster, everyone says a word. Words have two conditions: each word starts with the letter last one ended with and words must make full sentences",
             "Everyday Joker - Riddle the person to your right",
             "Guess my name - Gamemaster chooses 3 people from your group. Chosen people pick any person or character. The others ask yes/no questions to figure out the characters name",
             "FizzBuzz- People start incrementally counting numbers moving clockwise through the group. For every number divisible by 3, say \"Fizz\" and for every number divisible by 5 say \"Buzz\". If the are divisible by both, say \"FizzBuzz\" and turn the circle around",
-            "Knigts and knaves - Knights always tell the truth, and knaves always lie.You meet two inhabitants: Peggy and Zippy. Peggy tells you that 'of Zippy and I, exactly one is a knight'. Zippy tells you that only a knave would say that Peggy is a knave. Who is a knight and who is a knave?",
+            "Knights and knaves - Knights always tell the truth, and knaves always lie.You meet two inhabitants: Peggy and Zippy. Peggy tells you that 'of Zippy and I, exactly one is a knight'. Zippy tells you that only a knave would say that Peggy is a knave. Who is a knight and who is a knave?",
             "Pass the food around - Go around the group, each one naming a food item with eggs, flour and milk/water in it. You may not repeat",
             "Gamemaster thinks of a word. The person on his right starts by saying one to three consecutive letters from the alphabet that are not part of this word. The next goes on as quick as he can",
-            ""
+            "The politician - the Gamemaster picks a person. This person must now give a 60 second speech without repeating a single word. Preparation time: 3 minutes"
             ];
         var tutvumis = [
             "Two truths and a lie - One by one each party member reveals two interesting facts about himself and adds one lie in the mix. The others try to guess the lie",
@@ -237,18 +238,53 @@ function createTable(s) {
             "Best drink i ever had - Everyone tell us about your favorite cocktail!",
             "Describe the suspect - Describe yourself with three sentences. Your name doesn't count",
             "You seem interesting - Compliment two other people who you find interesting",
-            ""];
+            "Hobby - The Gamemaster chooses a person. Everyone has to guess one of the chosen persons hobby. The guesser can only suggest hobbies that he/she does not have!"
+        ];
         var naughty = [
-            "Strip and tease - Each person chooses whatclothing item the person across from him/her must remove in a seductive manner",
-            "Touch this - Choose on person that will caress you. Person on your right dictates where you will be caressed",
+            "Strip and tease - Each person chooses what clothing item the person across from him/her must remove in a seductive manner",
+            "Touch this - Choose one person that will caress you. Person on your right dictates where you will be caressed",
             "Fantasy close to home - GameMaster chooses two people that have to reveal to everyone who from your party he/she would take home. They must describe shortly what you would do to them",
             "Clothes bazaar - Each person chooses one person from his/her desired sex that he will change one item of clothing that he/she wishes. Both of them will wear that item until the end of the game. You deside how naughty you make the game",
-            "",
-            "",
-            "",
-            ""];
-        //alert("Esimene kord!");
+            "Fetishes - Each person will reveal one fetish that they have. C'mon, everyone has something.",
+            "Lap dance - The Gamemaster chooses two people. One has to give the other a minute-long lap dance. Genders are up to the Gamemaster.",
+            "Dentist's dream - The Gamemaster chooses two people. They have to get the other persons shirt off using only their teeth.",
+            "The honest truth - The Gamemaster grades everyone from 1-10. With and without clothes."
+        ];
+        var rules = [
+            "Question Master - The Gamemaster chooses a person. His/her questions may not be answered from now on, unless another card tells so.",
+            "Eyebrow King - When the Gamemaster is holding his hand up to his eyebrow, everyone must else must follow.",
+            "The King is dead, long live the King! - The Gamemaster title rotates one clockwise.",
+            "I DO make the rules! - Come up with a new rule. For example, the Gamemaster is always wrong.",
+            "Save us! - Cancel an effect of another Rule card.",
+            "Yes-man - The Gamemaster chooses a person. This person may only answer \"yes\"",
+            "The weirdo - The Gamemaster chooses a person. He/she must wear one shoe, but not the other.",
+            "Wait, what? - The Gamemaster may now only speak in double negatives. I mean, is unable to not speak only in double negatives."
+        ];
+        var questions = [
+            "Who seems the most interesting in this group?",
+            "What animal would you like to be?",
+            "What if the first thing that pops into your mind when you wake up next to a stranger?",
+            "Who would you prefer to be stuck in a lift with?",
+            "What have you done that you never want to do again? No follow-up questions.",
+            "Describe your perfect eyes.",
+            "How short of a skirt would you be willing to wear?",
+            "What is your most embarrassing tale?"
+        ];
+        var discussions = [
+            "What is the main reason you use/don't use social networks? Why or why not?",
+            "You have been caught driving on public transport without a ticket. How do you try to avoid getting ticketed? ",
+            "What deal would you make with the devil to sell your soul?",
+            "You have a good, albeit lonely friend that has never been on a date. How would you help him?",
+            "What would you do with a million dollars?",
+            "Do you use mobile apps in a constructive way or just to waste time? Explain and bring examples.",
+            "Could you live abroad? Why or why not?",
+            "What is the hardest part of being an astronaut? Why?"
+        ];
         map["keys"] = keys;
+        //alert("Esimene kord!");
+        map["discussions"] = discussions;
+        map["questions"] = questions;
+        map["rules"] = rules;
         map["drinking"] = drinking;
         map["sporty"] = sporty;
         map["brainy"] = brainy;

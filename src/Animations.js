@@ -6,13 +6,23 @@ var cumulative = 5;
 function openCard(temp, s, card, allPossibleTasks) {
     function onMouseUp(event, type) {
         s.busy = false;
+        var randomnumber1=Math.round(Math.random());
+        var randomnumber2=Math.round(Math.random());
+        if (randomnumber1 == 0){
+            randomnumber1 = -1;
+        }
+        if (randomnumber2 == 0){
+            randomnumber2 = -1;
+        }
         if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
             cumulative += 5;
             score += cumulative;
             s.labelCoin.setString("Score: " + score);
             event.getParent().runAction(
-                cc.moveTo(2, cc.winSize.width * 3, cc.winSize.height * 3)
+                cc.moveTo(2, randomnumber1 * (-1) * cc.winSize.width * (Math.random()*3+2), randomnumber2 * (-1) * cc.winSize.height * (Math.random()*3+2))
             );
+            console.log(Math.random()*3+3);
+            console.log(Math.random()*3+3);
             if (win == 1) {
                 winC();
             }
@@ -20,7 +30,7 @@ function openCard(temp, s, card, allPossibleTasks) {
             score -= 25;
             s.labelCoin.setString("Score: " + score);
             event.getParent().runAction(
-                cc.moveTo(2, cc.winSize.width * 3, cc.winSize.height * 3)
+                cc.moveTo(2, randomnumber1 * (-1) * cc.winSize.width * (Math.random()*3+2), randomnumber2 * (-1) * cc.winSize.height * (Math.random()*3+2))
             );
             if (win == 1) {
                 winC();
@@ -55,7 +65,6 @@ function openCard(temp, s, card, allPossibleTasks) {
         anchorY: 0,
         x: widgetSize.width/2
     });
-    alert(contentText.string.length);
     if (contentText.string.length < 100 && contentText.string.length > 50){
         contentText.fontSize = 60;
     } else if (contentText.string.length < 200){
