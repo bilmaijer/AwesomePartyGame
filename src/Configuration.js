@@ -51,8 +51,23 @@ var ConfigLayer = cc.Layer.extend({
         confirm.setPosition(200, 70);
         confirm.didIt = true;
 
+        var help = new ccui.Button();
+        help.loadTextures("res/check.png", "res/check.png", " ");
+        help.setScale(0.2);
+        help.addTouchEventListener(onHelp, this);
+        help.setPosition(400, 70);
+        help.didIt = true;
+
         layout.addChild(confirm, 252);
+        layout.addChild(help, 252);
         this.addChild(layout, 251);
+
+        function onHelp(event, type){
+            if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
+                fromWhere = 1;
+                cc.director.runScene(new HowToPlayScene());
+            }
+        }
 
         function onConfirm(event, type) {
             if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {

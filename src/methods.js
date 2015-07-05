@@ -198,12 +198,12 @@ function createTable(s) {
         var map = {};
         var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty", "discussions", "questions", "rules"];
         var drinking = [
-            "Make up a drinking rule. e.g. Who stands up for whatever reason, must drink",
-            "Pick three people to share their drinks with anyone who wishes",
+            "No sober lawmakers - Make up a drinking rule. e.g. Who stands up for whatever reason, must drink",
+            "Sharing is caring - Pick three people to share their drinks with anyone who wishes",
             "Window watchers - Windows phone users must drink",
             "Partly mechanical - Android users must drink",
             "Apple munchers drink - Everyone who has an iPhone must drink",
-            "Everyone (who's alive) drinks. Repeat as many times as you deem reasonable",
+            "No zombies allowed - Everyone (who's alive) drinks. Repeat as many times as you deem reasonable",
             "Waterfall - On start everyone starts drinking and you may stop when the person to your left has stopped. Gamemaster will stop drinking first",
             "Never have I ever - You say something that you have never done. Each person who has takes a sip of his drink. Repeat until each person has had his turn",
             "We will order all of it - Gamemaster chooses one category and you start naming items that belong in that category. Game over when someone can't think of anything new",
@@ -214,12 +214,11 @@ function createTable(s) {
             "Repetition is the key - See who can do most push ups",
             "Flamingo forest - Everyone stands on one leg with no support. Lets see who can last the longest",
             "Follow the leader - The Gamemaster shows one physical exercise that the others must do. Then the others do the same in a clockwise order until everyone has had a go",
-            "Football - Take a piece of paper and make a ball out of it. Now take two items and set up a goal. The Gamemaster is the goalie. Score 3 points!",
+            "Football - Take a piece of paper and make a ball out of it. Now take two items and set up a goal. The Gamemaster is the goalie. Take turns and try to score 3 points!",
             "Weird Potato - Wrap up a piece of paper to make a ball. Stand in a circle. Pass on this ball using any body part except your arms. The circle starts and ends with the Gamemaster.",
             "Number game - Form teams of two. The Gamemaster will give each team a number that they have to form with their bodies.",
             "Workplace pantomime - Each person has to explain a job to other players without words in any form. Guess at least half correctly!"
         ];
-
         var brainy = [
             "Do the wordchain - Starting from the Gamemaster, everyone says a word. Words have two conditions: each word starts with the letter last one ended with and words must make full sentences",
             "Everyday Joker - Riddle the person to your right",
@@ -227,7 +226,7 @@ function createTable(s) {
             "FizzBuzz- People start incrementally counting numbers moving clockwise through the group. For every number divisible by 3, say \"Fizz\" and for every number divisible by 5 say \"Buzz\". If the are divisible by both, say \"FizzBuzz\" and turn the circle around",
             "Knights and knaves - Knights always tell the truth, and knaves always lie.You meet two inhabitants: Peggy and Zippy. Peggy tells you that 'of Zippy and I, exactly one is a knight'. Zippy tells you that only a knave would say that Peggy is a knave. Who is a knight and who is a knave?",
             "Pass the food around - Go around the group, each one naming a food item with eggs, flour and milk/water in it. You may not repeat",
-            "Gamemaster thinks of a word. The person on his right starts by saying one to three consecutive letters from the alphabet that are not part of this word. The next goes on as quick as he can",
+            "Letter dodge - Gamemaster thinks of a word. The person on his right starts by saying one to three consecutive letters from the alphabet that are not part of this word. The next goes on as quick as he can",
             "The politician - the Gamemaster picks a person. This person must now give a 60 second speech without repeating a single word. Preparation time: 3 minutes"
             ];
         var tutvumis = [

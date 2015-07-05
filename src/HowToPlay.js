@@ -54,7 +54,12 @@ var HowToPlay = cc.Layer.extend({
 
         function onMouseUp(event, type) {
             if (type == ccui.Widget.TOUCH_ENDED && event.didIt) {
-                cc.director.runScene(new MainMenuScene())
+                if (fromWhere == 0) {
+                    cc.director.runScene(new MainMenuScene())
+                }
+                else if (fromWhere == 1){
+                    cc.director.runScene(new ConfigScene())
+                }
             }
         }
 
