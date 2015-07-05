@@ -21,16 +21,16 @@ var ConfigLayer = cc.Layer.extend({
         layout.setContentSize(cc.size(400, 400));
 
         finalThemes = [];
-        var keys = ["drinking", "sporty", "brainy", "tutvumis", "naughty", "rules", "questions", "discussions"];
+        var keys = [ "sporty", "tutvumis", "naughty",  "questions","rules", "discussions", "brainy","drinking"];
         var buttons = [];
 
         for (var p = 0; p < keys.length; p++) {
             var temp = new ccui.Button();
-            temp.a = "res/test.png";
-            temp.b = "res/test2.png";
+            temp.a = "res/"+keys[p]+"_cat.png";
+            temp.b = "res/"+keys[p]+"_selected.png";
             temp.loadTextures(temp.a, temp.b, " ");
             temp.addTouchEventListener(onMouseUp, this);
-            temp.setScale(0.7);
+            temp.setScale(0.5);
             if (p < 4) {
                 temp.setPosition(100, 420 - ((p+1) * 70));
             }
