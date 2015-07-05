@@ -43,7 +43,7 @@ var MainMenu = cc.Layer.extend({
 
         menu.addChild(playButton);
         menu.addChild(howToPlayButton);
-        menu.addChild(endGameButton);
+        //menu.addChild(endGameButton);
         //menu.addChild(shutDown);
 
         menu.x = size.width / 2;

@@ -21,8 +21,6 @@ function openCard(temp, s, card, allPossibleTasks) {
             event.getParent().runAction(
                 cc.moveTo(2, randomnumber1 * (-1) * cc.winSize.width * (Math.random()*3+2), randomnumber2 * (-1) * cc.winSize.height * (Math.random()*3+2))
             );
-            console.log(Math.random()*3+3);
-            console.log(Math.random()*3+3);
             if (win == 1) {
                 winC();
             }
