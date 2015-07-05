@@ -52,10 +52,10 @@ var ConfigLayer = cc.Layer.extend({
         confirm.didIt = true;
 
         var help = new ccui.Button();
-        help.loadTextures("res/check.png", "res/check.png", " ");
-        help.setScale(0.2);
+        help.loadTextures("res/help_button.png", "res/help_button.png", " ");
+        help.setScale(0.3);
         help.addTouchEventListener(onHelp, this);
-        help.setPosition(400, 70);
+        help.setPosition(350, 65);
         help.didIt = true;
 
         layout.addChild(confirm, 252);
@@ -89,7 +89,7 @@ var ConfigLayer = cc.Layer.extend({
                         anchorX: 0.6,
                         anchorY: 0
                     });
-                    warning.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER)
+                    warning.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
                     warning.setColor(cc.color(255, 0, 0, 0));
                     warning.setPositionX(230);
                     warning.setPositionY(20);

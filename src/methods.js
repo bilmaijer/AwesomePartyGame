@@ -109,7 +109,7 @@ function createTable(s) {
                         temp.switch = false;
                     }
                     else {
-                        temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + "1.png", " ");
+                        temp.loadTextures(map[temp.name][1] + ".png", map[temp.name][1] + ".png", " ");
                         temp.type = map[temp.name][1];
                         temp.setScale(0.7, 0.7);
                         temp.switch = true;
